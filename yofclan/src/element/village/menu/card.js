@@ -41,7 +41,7 @@ function Card() {
                 break;
         }
        
-    }     
+  }     
   return (
     <>
       <div className="card">
@@ -68,17 +68,16 @@ function Card() {
                 }}
               >
                 <Button
-                  id="zehi"
-                  variant="gradient"
+$                  variant="gradient"
                   gradient={{ from: "indigo", to: "cyan", deg: 105 }}
+                  onClick={() => test( "zehi")}
                 >
                   ZEHI: XXXoil
                 </Button>
                 <Button
-                  id="militaryBase"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  label="dfghjk"
+                  onClick={() => test( "militaryBase")}
                 >
                   MilitaryBase XXXXor XXX oil
                 </Button>
@@ -107,26 +106,25 @@ function Card() {
                 }}
               >
                 <Button
-                  id="mairie"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("mairie")}
                 >
                   Mairie 0 or
                 </Button>
                 <Button
-                  id="strongBoxe"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("strongBoxe")}
                 >
                   Or Storage 110 oil
                 </Button>
                 <Button
-                  id="silot"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("silot")}
                 >
                   Oil Storage 100 or
-                  {/* <img src=""></img> */}
                 </Button>
               </Button.Group>
             </div>
@@ -142,7 +140,6 @@ function Card() {
             Defense
           </Button>
           <div
-            id="content"
             style={{ display: defenseState ? "block" : "none" }}
           >
             <div className="all">
@@ -153,23 +150,23 @@ function Card() {
                 }}
               >
                 <Button
-                  id="milice"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("milice")}
                 >
                   Milice XXXX
                 </Button>
                 <Button
-                  id="cannon"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("cannon")}
                 >
                   Cannon XXXXX 
                 </Button>
                 <Button
-                  id="laser"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("laser")}
                 >
                   Laser XXXX 
                 </Button>
@@ -195,16 +192,16 @@ function Card() {
                 }}
               >
                 <Button
-                  id="mine"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("mine")}
                 >
                   Mine  XXXX
                 </Button>
                 <Button
-                  id="drilingMachine"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("drilingMachine")}
                 >
                   Driling oil XXXX 
                 </Button>
@@ -233,25 +230,23 @@ function Card() {
                 }}
               >
                 <Button
-                  id="hologram"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("hologram")}
                 >
                   Hologram xxxx 
-                  {/* <img src=""></img> */}
                 </Button>
                 <Button
-                  id="banch"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("banch")}
                 >
                   Banch XXXX
-                  {/* <img src=""></img> */}
                 </Button>
                 <Button
-                  id="pub"
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
+                  onClick={() =>test("pub")}
                 >
                   Pub XXXX
                 </Button>
@@ -263,5 +258,11 @@ function Card() {
     </>
   );
 }
+function test(value) {
+  
+  
+  console.log(value);
+}
 
 export default Card;
+
