@@ -1,6 +1,6 @@
 import '../../css/index.css'
+
 /*
-  TODO: Création des batiments 
   TODO: Déplacement des batiments 
 */
 function Village() {

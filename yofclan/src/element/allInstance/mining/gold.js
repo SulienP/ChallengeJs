@@ -1,4 +1,4 @@
-import GoldMining from "../allInstance.js";
+import { GoldMining } from "../allInstance.js";
 let newId = -1;
 
 export class GoldMine extends GoldMining {

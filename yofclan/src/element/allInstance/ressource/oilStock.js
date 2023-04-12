@@ -1,4 +1,4 @@
-import OilStorage from "../allInstance.js";
+import { OilStorage } from '../allInstance.js';
 let newId = -1;
 
 export class OilSTORAGE extends OilStorage {

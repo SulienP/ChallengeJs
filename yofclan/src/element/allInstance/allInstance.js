@@ -135,6 +135,8 @@ export class Mairie {
     this.maxGOldStorage = maxGOldStorage;
     this.maxOIlStorage = maxOIlStorage;
     this.maxDefense = maxDefense;
+    this.currentNumberGOldStorage = currentNumberGOldStorage;
+    this.currentNumberDefense = currentNumberDefense;
     this.currentNumberOilMining = currentNumberOilMining;
     this.currentNumberGOldMining = currentNumberGOldMining;
     this.currentNumberOilStorage = currentNumberOilStorage;
@@ -187,11 +189,11 @@ export class Fighters {
   }
 }
 /*
-  TODO: Instance mairie, nbr max batiment par type , nom, max stock mine /oil, nbr max qtt
-  TODO: Instance militaire , nbr de place, nbr de bat , nom ,type
-  TODO: Instance soldat, place prise, nom, vie , attaque ,déffense
-  TODO: Instance défense, def, attaque , place prise 
-  TODO: Instance mine oil , nbr bat , type, nom, prod ,prod max 
-  TODO: Instance déco, nom type
-  TODO: Instance stockage , nom,type
-  */
+  ! Instance mairie, nbr max batiment par type , nom, max stock mine /oil, nbr max qtt
+  ! Instance militaire , nbr de place, nbr de bat , nom ,type
+  ! Instance soldat, place prise, nom, vie , attaque ,déffense
+  ! Instance défense, def, attaque , place prise 
+  ! Instance mine oil , nbr bat , type, nom, prod ,prod max 
+  ! Instance déco, nom type
+  ! Instance stockage , nom,type
+*/

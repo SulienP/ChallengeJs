@@ -1,4 +1,4 @@
-import GoldStorage from "../allInstance.js";
+import { GoldStorage } from "../allInstance.js";
 let newId = -1;
 
 export class GOLDStorage extends GoldStorage {
