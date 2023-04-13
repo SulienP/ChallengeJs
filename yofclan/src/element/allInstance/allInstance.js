@@ -1,102 +1,23 @@
-export class Decoration{
-    constructor(name, type, id, ameliorationPrice) {
+export class Batiment{
+    constructor(name, type, id,price, ameliorationPrice,defense, typeProductions, productionByHour,productionMax, maxStorage, storageType, level, ameliorationLevel ) {
         this.name = name
         this.type = type
       this.id = id
-      this.ameliorationPrice= ameliorationPrice
+      this.price = price
+      this.ameliorationPrice = ameliorationPrice
+      this.defense = defense
+      this.typeProductions = typeProductions
+      this.productionByHour = productionByHour
+      this.productionMax = productionMax
+      this.maxStorage = maxStorage
+      this.storageType = storageType
+      this.level = level
+      this.ameliorationLevel = ameliorationLevel
     }
 }
 
-export class GoldMining {
-  constructor(
-    name,
-    type,
-    id,
-    productions,
-    productsMax,
-    level,
-    ameliorationPrice,
-  ) {
-    this.name = name;
-    this.type = type;
-    this.id = id;
-    this.productions = productions;
-    this.productionsMax = productsMax;
-    this.level = level;
-    this.ameliorationPrice =ameliorationPrice;
-  }
-}
-export class OilMining {
-  constructor(
-    name,
-    type,
-    id,
-    productions,
-    productsMax,
-    level,
-    ameliorationPrice,
-  ) {
-    this.name = name;
-    this.type = type;
-    this.id = id;
-    this.productions = productions;
-    this.productionsMax = productsMax;
-    this.level = level;
-    this.ameliorationPrice = ameliorationPrice;
-  }
-}
 
-export class GoldStorage {
-  constructor(
-    name,
-    type,
-    id,
-    stockageMax,
-    level,
-    ameliorationPrice
-  ) {
-    this.name = name;
-    this.type = type;
-    this.id = id;
-    this.stockageMax = stockageMax;
-    this.level = level;
-    this.ameliorationPrice = ameliorationPrice;
-  }
-}
-export class OilStorage {
-  constructor(
-    name,
-    type,
-    id,
-    stockageMax,
-    level,
-    ameliorationPrice
-  ) {
-    this.name = name;
-    this.type = type;
-    this.id = id;
-    this.stockageMax = stockageMax;
-    this.level = level;
-    this.ameliorationPrie = ameliorationPrice;
-  }
-}
-export class Defense {
-  constructor(
-    name,
-    type,
-    id,
-    defense,
-    level,
-    ameliorationPrice
-  ) {
-    this.name = name;
-    this.type = type;
-    this.id = id;
-    this.defense = defense;
-    this.level = level;
-    this.ameliorationPrice = ameliorationPrice;
-  }
-}
+
 export class Mairie {
   constructor(
     name,
@@ -144,25 +65,7 @@ export class Mairie {
     this.currentMilitaryBat = currentMilitaryBat;
   }
 }
-export class Military {
-  constructor(
-    name,
-    type,
-    id,
-    defense,
-    place,
-    level,
-    ameliorationPrice
-  ) {
-    this.name = name;
-        this.type = type;
-    this.id = id;
-    this.defense = defense;
-    this.place = place;
-    this.level = level;
-    this.ameliorationPrice = ameliorationPrice;
-  }
-}
+
 export class Fighters {
   constructor(
     name,
@@ -188,12 +91,3 @@ export class Fighters {
     this.ameliorationPrice = ameliorationPrice;
   }
 }
-/*
-  ! Instance mairie, nbr max batiment par type , nom, max stock mine /oil, nbr max qtt
-  ! Instance militaire , nbr de place, nbr de bat , nom ,type
-  ! Instance soldat, place prise, nom, vie , attaque ,déffense
-  ! Instance défense, def, attaque , place prise 
-  ! Instance mine oil , nbr bat , type, nom, prod ,prod max 
-  ! Instance déco, nom type
-  ! Instance stockage , nom,type
-*/

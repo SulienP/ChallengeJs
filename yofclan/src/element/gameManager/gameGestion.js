@@ -9,6 +9,7 @@ import { OILMINE } from "../../element/allInstance/mining/oil.js";
     TODO: Sauvegarde du jeu
     
 */
+
 function StartGame() {
     let myMairie = new MAIRIE();
     let GoldStorage = new GOLDStorage();
@@ -20,7 +21,5 @@ function StartGame() {
     myMairie.currentNumberOilMining++
     myMairie.currentNumberOilStorage++
     myMairie.currentNumberGOldStorage++
-    console.log(myMairie)
-
 }
 export default StartGame;
