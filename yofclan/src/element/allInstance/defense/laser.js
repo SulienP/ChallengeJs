@@ -1,9 +1,9 @@
 import Military from "../allInstance.js";
-let newId = 0;
-
+    let id = -1;
+    let newId = 0;
 export class Laser extends Military {
-  newId = newId + 1;
-
+  newId = id + 1;
+  id = id +1
   constructor() {
     let finalId = "laser" + newId.toString();
 

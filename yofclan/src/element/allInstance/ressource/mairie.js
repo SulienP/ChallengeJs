@@ -1,11 +1,11 @@
 import { Mairie }  from '../allInstance.js';
-let newId = -1;
-
+let id = -1;
+let newId =0
 export class MAIRIE extends Mairie {
-  newId = newId + 1;
+   newId = id + 1;
   constructor() {
     let finalId = "mairie" + newId.toString();
-    super("mairie", "mairie", finalId, 1, 15, 0, 0,0, 1000,5,5,2,2,5,0,0,0,0,0,5,0);
+    super("mairie", "mairie", finalId, 1, 15, 0, 1,0, 1000,5,5,2,2,5,[],[],[],[],[],5,0);
   }
 }
 /*

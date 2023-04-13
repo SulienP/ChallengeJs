@@ -1,4 +1,7 @@
 import StartGame from "./start.js";
+import buy from "./buy.js";
+import upgrade from "./upgrade.js"
+import fight from "../figthGestion/fight.js"
 GameManager()
 function GameManager(element) {
   if (element === undefined) {
@@ -11,10 +14,13 @@ function GameManager(element) {
   switch (element) {
 
     case "buy": 
-      // "fonction buy"
+      buy();
       break;
     case "upgrade":
-      // "fonction upgrade"
+      upgrade();
+      break;
+    case "attaque":
+      fight();
       break;
     default:
       break;

@@ -4,12 +4,14 @@ import Village from '../src/element/village/village.js';
 import OilBar from '../src/element/village/menu/oilBar.js'
 import GoldBar from "../src/element/village/menu/orBar.js";
 import GameManager from "../src/element/gameManager/gameManager.js";
+import Attaque from "../src/element/village/menu/attaque.js";
 function App() {
   return (
     <>
         <GameManager></GameManager>
         <GoldBar></GoldBar>
-        <OilBar></OilBar>
+      <OilBar></OilBar>
+      <Attaque></Attaque>
 $      <Village></Village>
       <Shop></Shop>
     </>

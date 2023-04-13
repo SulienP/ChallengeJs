@@ -44,3 +44,17 @@
         Check def contre attaque 
         Si défaite
             ENlevage de ressource
+
+- buy envoie un tableau avec rang 0 buy, ensuite le batiment, le cout, le type de ressource 
+    appellera la fonction de rajout de batiment si les vérification sont ok
+    placement d'un batiment dans la carte 
+-attaque envoie un tableau avec rang 0 atk
+    il retoune la vitoire ou la défaite  
+    avec un gain de en fonction de victoire ou pas 
+- recuperation recuperation rang 0 et ensuite appelele la fonction de ressource 
+
+id d'une ressource = rang dans le tableau
+comme tout passe par buy le tableau sera constant 
+stockage des batiments de ressources dans un tableau de la mairie 
+récupation des totaux maximum de ressource, boucle en focntion du tableau de rang i 
+    tt = tt +  myMairie.GoldNumber[i.maxRessource] 
