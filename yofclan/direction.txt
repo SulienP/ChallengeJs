@@ -1,0 +1,46 @@
+- GameManager:
+    au début il appelle la fonction start si premier lancement
+    Récupère les infos et les stocks 
+    Si il y'a fonction buy, il récupère ce que veux la personne avec son prix
+    Il vérifie:
+        Le nombre de batiment
+        Si il y a assez de ressource 
+        SI ok:
+            Il ajoute a la mairie La ressource La défense, le nombre de batiment
+            
+        Sinon il envoie un message d'erreur et rien ne se passe 
+    Si il y a fonction troupes:
+        Il vérifie la ressource 
+        La place 
+            Si ok:
+                Ajout d'attaque
+                Ajout de défense?
+                Enlevage de ressoucre 
+                Enlevage de place
+                Sotckage des nouvelles troupes
+            Sinon 
+            message d'erreur
+    Si récupération de ressource
+        Il vérifie
+            La quantité max 
+            Le stockage max
+    Si améliration:
+        Check niveau max
+        Check ressource
+        Si ok
+            Agit sur l'instances 
+            Ajout de la production
+            Ajout du stockage
+            AJout de la défense
+            Agit sur la mairie
+    Si attaque j
+        Génération de défense ennemis
+        Récupération attaque max
+        SI victoire
+            Ajout de ressoucre
+            Enlevage de soldat
+    SI attaque ordi
+        Génération d'attaque
+        Check def contre attaque 
+        Si défaite
+            ENlevage de ressource

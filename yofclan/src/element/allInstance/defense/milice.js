@@ -5,7 +5,7 @@ export class Milice extends Batiment {
   constructor() {
     let finalId = "milice" + newId.toString();
 
-    super("milice", "defense", finalId, 40, 150,50,"nothing",0,0,0,"nothing",0, 1, 150);
+    super("milice", "defense", finalId, 40, 150,50,"nothing",0,0,0,"nothing",0, 1);
   }
 }
 

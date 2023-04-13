@@ -3,16 +3,14 @@ import Shop from "../src/element/village/menu/shop.js";
 import Village from '../src/element/village/village.js';
 import OilBar from '../src/element/village/menu/oilBar.js'
 import GoldBar from "../src/element/village/menu/orBar.js";
-import StartGame from "../src/element/gameManager/gameGestion.js"
+import GameManager from "../src/element/gameManager/gameManager.js";
 function App() {
   return (
     <>
-      <headear>
-        <StartGame></StartGame>
+        <GameManager></GameManager>
         <GoldBar></GoldBar>
         <OilBar></OilBar>
-      </headear>
-      <Village></Village>
+$      <Village></Village>
       <Shop></Shop>
     </>
   );

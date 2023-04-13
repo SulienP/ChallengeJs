@@ -18,8 +18,7 @@ export class Camps extends Batiment {
       0,
       "nothing",
       0,
-      1,
-      200,
+      1
     );
   }
 }

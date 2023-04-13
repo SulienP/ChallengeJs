@@ -7,7 +7,7 @@ export class Laser extends Military {
   constructor() {
     let finalId = "laser" + newId.toString();
 
-    super("laser", "defense", finalId, 40, 150,150,"nothing",0,0,0,"nothing",0, 1, 150);
+    super("laser", "defense", finalId, 40, 150,150,"nothing",0,0,0,"nothing",0, 1);
   }
 }
 
