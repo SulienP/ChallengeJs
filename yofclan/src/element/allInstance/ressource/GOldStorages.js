@@ -5,9 +5,9 @@ export class GOLDStorage extends Batiment {
   newId = newId + 1;
   constructor() {
     let finalId = "oil" + newId.toString();
-    super("gold", "mining", finalId, 1000, 0,"nothing", 0,0,1000,"gold",1, 400);
+    super("gold", "mining", finalId, 1000, 0,"nothing", 0,0,1000,"gold",0,1, 400);
   }
 }
 /*
-  !    constructor(name, type, id,price, ameliorationPrice,defense, typeProductions, productionByHour,productionMax, maxStorage, storageType, level ) {
+  !    constructor(name, type, id,price, ameliorationPrice,defense, typeProductions, productionByHour,productionMax, maxStorage, storageType,currentStorgage ,level, aame ) {
 */

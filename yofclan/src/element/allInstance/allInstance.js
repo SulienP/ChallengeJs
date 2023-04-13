@@ -1,5 +1,5 @@
 export class Batiment{
-    constructor(name, type, id,price, ameliorationPrice,defense, typeProductions, productionByHour,productionMax, maxStorage, storageType, level, ameliorationLevel ) {
+    constructor(name, type, id,price, ameliorationPrice,defense, typeProductions, productionByHour,productionMax, maxStorage, storageType,currentStockage, level, ameliorationLevel ) {
         this.name = name
         this.type = type
       this.id = id
@@ -11,6 +11,7 @@ export class Batiment{
       this.productionMax = productionMax
       this.maxStorage = maxStorage
       this.storageType = storageType
+      this.currentStockage = currentStockage
       this.level = level
       this.ameliorationLevel = ameliorationLevel
     }

@@ -18,6 +18,7 @@ export class GoldMine extends Batiment {
       100,
       0,
       "nothing",
+      0,
       1,
       100
     );

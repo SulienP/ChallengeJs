@@ -1,5 +1,6 @@
 import "../../../css/card.css";
 import { Button } from "@mantine/core";
+import buy from "../../gameManager/buy.js"
 import React, { useState } from "react";
 function Card() {
     const [buttonDisplay , buttonDisplaySetState] = useState(true)
@@ -259,7 +260,7 @@ $                  variant="gradient"
   );
 }
 function test(value) {
-  
+  buy(value)
 }
 
 export default Card;

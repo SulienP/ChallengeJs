@@ -5,7 +5,7 @@ export class Cannon extends Military {
 
   constructor() {
     let finalId = "cannon" + newId.toString();
-    super("milice", "defense", finalId, 40, 150,90,"nothing",0,0,0,"nothing", 1, 150);
+    super("milice", "defense", finalId, 40, 150,90,"nothing",0,0,0,"nothing",0, 1, 150);
   }
 }
 

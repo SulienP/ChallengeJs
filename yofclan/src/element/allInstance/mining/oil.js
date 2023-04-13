@@ -18,6 +18,7 @@ export class OILMINE extends Batiment {
       1000,
       0,
       "nothing",
+      0,
       1,
       100
     );

@@ -21,5 +21,8 @@ function StartGame() {
     myMairie.currentNumberOilMining++
     myMairie.currentNumberOilStorage++
     myMairie.currentNumberGOldStorage++
+    myMairie.maxGoldRessource = GoldStorage.maxStorage
+    myMairie.maxOIlStorage = oilStorage.maxStorage
+    
 }
 export default StartGame;
