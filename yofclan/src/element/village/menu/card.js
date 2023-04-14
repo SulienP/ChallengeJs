@@ -73,7 +73,7 @@ function Card() {
                   $
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan", deg: 105 }}
-                  onClick={() => test(["buy", "military", "oil", 150, "zehi"])}
+                  onClick={() => sendBuy(["buy", "military", "oil", 150, "zehi"])}
                 >
                   ZEHI: XXXoil
                 </Button>
@@ -81,7 +81,7 @@ function Card() {
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
                   onClick={() =>
-                    test(["buy", "military", "oil", 150, "militaryBase"])
+                    sendBuy(["buy", "military", "oil", 150, "militaryBase"])
                   }
                 >
                   MilitaryBase XXXXor XXX oil
@@ -113,21 +113,18 @@ function Card() {
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("mairie")}
+                  onClick={() =>
+                    sendBuy(["buy", "ressource", "oil", 150, "goldStorage"])
+                  }
                 >
-                  Mairie 0 or
+                  Gold Storage 110 oil
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("strongBoxe")}
-                >
-                  Or Storage 110 oil
-                </Button>
-                <Button
-                  variant="gradient"
-                  gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("silot")}
+                  onClick={() =>
+                    sendBuy(["buy", "ressource", "or", 150, "oilStorage"])
+                  }
                 >
                   Oil Storage 100 or
                 </Button>
@@ -155,21 +152,21 @@ function Card() {
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("milice")}
+                  onClick={() => sendBuy(["buy", "defense", "or", 150, "milice"])}
                 >
                   Milice XXXX
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("cannon")}
+                  onClick={() => sendBuy(["buy", "defense", "or", 150, "cannon"])}
                 >
                   Cannon XXXXX
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("laser")}
+                  onClick={() => sendBuy(["buy", "defense", "or", 150, "laser"])}
                 >
                   Laser XXXX
                 </Button>
@@ -197,16 +194,18 @@ function Card() {
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("mine")}
+                  onClick={() =>
+                    sendBuy(["buy", "mining", "oil", 150, "goldMine"])
+                  }
                 >
                   Mine XXXX
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("drilingMachine")}
+                  onClick={() => sendBuy(["buy", "mining", "or", 150, "oilMine"])}
                 >
-                  Driling oil XXXX
+                  Oil mine XXXX
                 </Button>
               </Button.Group>
             </div>
@@ -235,21 +234,25 @@ function Card() {
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("hologram")}
+                  onClick={() =>
+                    sendBuy(["buy", "decoration", "oil", 150, "hologram"])
+                  }
                 >
                   Hologram xxxx
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("banch")}
+                  onClick={() =>
+                    sendBuy(["buy", "decoration", "oil", 150, "banch"])
+                  }
                 >
                   Banch XXXX
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test("pub")}
+                  onClick={() => sendBuy(["buy", "decoration", "oil", 150, "pub"])}
                 >
                   Pub XXXX
                 </Button>
@@ -261,7 +264,7 @@ function Card() {
     </>
   );
 }
-function test(value) {
+function sendBuy(value) {
   GameManager(value)
 }
 

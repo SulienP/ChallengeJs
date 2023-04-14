@@ -8,29 +8,35 @@ function buy(value) {
     let newBat = Batiment
     if (value[2] === "oil") {
         if (myMairie.currentOil > value[3]) {
-        if (value[1] === "military") {
-            if (myMairie.currentMilitaryBat.length < myMairie.maxMilitary) {
+            if (value[1] === "military") {
+                if (myMairie.currentMilitaryBat.length < myMairie.maxMilitary) {
                     switch (value[4]) {
-                      case "zehi":
-                        newBat = new Zehi();
-                        myMairie.currentMilitaryBat.push(newBat);
-                        myMairie.currentOil = myMairie.currentOil - value[3];
-                        localStorage.setItem("myMairie", JSON.stringify(myMairie));
-                        break;
-                      case "militaryBase":
-                        newBat = new Camps();
-                        myMairie.currentMilitaryBat.push(newBat);
-                        myMairie.currentOil = myMairie.currentOil - value[3];
-                         localStorage.setItem("myMairie", JSON.stringify(myMairie));
-                        break;
-                      default:
-                        break;
+                        case "zehi":
+                            newBat = new Zehi();
+                            myMairie.currentMilitaryBat.push(newBat);
+                            myMairie.currentOil = myMairie.currentOil - value[3];
+                            localStorage.setItem("myMairie", JSON.stringify(myMairie));
+                            return true;
+                        
+                        case "militaryBase":
+                            newBat = new Camps();
+                            myMairie.currentMilitaryBat.push(newBat);
+                            myMairie.currentOil = myMairie.currentOil - value[3];
+                            localStorage.setItem("myMairie", JSON.stringify(myMairie));
+                            return true;
+                       
+                        default:
+                            break;
                     }
 
                 }
-                }
+            } else {
+                return false
             }
-        }
+        } else {
+            return false
+        } 
     }
+}
 
 export default buy;
