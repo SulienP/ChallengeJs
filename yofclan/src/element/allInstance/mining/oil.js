@@ -1,12 +1,10 @@
 import { Batiment } from "../allInstance.js";
-    let id = -1;
-    let newId = 0;
 
 export class OILMINE extends Batiment {
-  newId = id + 1;
-  id = id +1
+  static id = 0;
   constructor() {
-    let finalId = "oil" + newId.toString();
+    OILMINE.id++;
+    let finalId = "OILMINE" + OILMINE.id.toString();
     super(
       "oil",
       "mining",

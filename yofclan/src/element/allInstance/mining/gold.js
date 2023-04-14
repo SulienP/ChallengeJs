@@ -1,11 +1,10 @@
 import { Batiment } from "../allInstance.js";
-    let id = -1;
-    let newId = 0;
+
 export class GoldMine extends Batiment {
-  newId = id + 1;
-  id = id +1
+  static id = 0;
   constructor() {
-    let finalId = "gold" + newId.toString();
+    GoldMine.id++;
+    let finalId = "Zehi" + GoldMine.id.toString();
     super(
       "gold",
       "mining",

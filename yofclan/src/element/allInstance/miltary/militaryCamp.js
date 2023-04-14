@@ -1,11 +1,10 @@
-import Batiment from "../allInstance.js";
-    let id = -1;
-let newId = 0
+import { Batiment } from "../allInstance.js";
+
 export class Camps extends Batiment {
-  newId = id + 1;
-  id =id+1
+  static id = 0;
   constructor() {
-    let finalId = "Camps" + newId.toString();
+    Camps.id++;
+    let finalId = "Milice" + Camps.id.toString();
 
     super(
       "camps",

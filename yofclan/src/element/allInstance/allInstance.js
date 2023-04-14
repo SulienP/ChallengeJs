@@ -13,6 +13,7 @@ export class Batiment{
       this.storageType = storageType
       this.currentStockage = currentStockage
       this.level = level
+
     }
 }
 
@@ -40,7 +41,9 @@ export class Mairie {
     currentNumberDefense,
     currentNumberOilStorage,
     maxMilitary,
-    currentMilitaryBat
+    currentMilitaryBat,
+    currentOil,
+    currentGold
   ) {
     this.name = name;
     this.id = id;
@@ -63,6 +66,8 @@ export class Mairie {
     this.currentNumberOilStorage = currentNumberOilStorage;
     this.maxMilitary = maxMilitary;
     this.currentMilitaryBat = currentMilitaryBat;
+    this.currentOil = currentOil;
+    this.currentGold = currentGold;
   }
 }
 

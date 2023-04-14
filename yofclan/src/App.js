@@ -12,10 +12,10 @@ function App() {
         <GoldBar></GoldBar>
       <OilBar></OilBar>
       <Attaque></Attaque>
-$      <Village></Village>
+     <Village></Village>
       <Shop></Shop>
     </>
   );
 }
-
+GameManager()
 export default App;

@@ -1,13 +1,26 @@
-import Batiment from "../allInstance.js";
-    let id = -1;
-let newId = 0
-export class Milice extends Batiment {
-  newId = id + 1
-  id =id +1
-  constructor() {
-    let finalId = "milice" + newId.toString();
+import {Batiment } from "../allInstance.js";
 
-    super("milice", "defense", finalId, 40, 150,50,"nothing",0,0,0,"nothing",0, 1);
+export class Milice extends Batiment {
+  static id = 0;
+  constructor() {
+    Milice.id++;
+    let finalId = "Milice" + Milice.id.toString();
+
+    super(
+      "milice",
+      "defense",
+      finalId,
+      40,
+      150,
+      50,
+      "nothing",
+      0,
+      0,
+      0,
+      "nothing",
+      0,
+      1
+    );
   }
 }
 

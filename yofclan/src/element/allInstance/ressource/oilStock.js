@@ -1,12 +1,25 @@
 import { Batiment } from "../allInstance.js";
-    let id = -1;
-    let newId = 0;
+
 export class OilSTORAGE extends Batiment {
-  newId = id + 1;
-  id = id +1
+  static id = 0;
   constructor() {
-    let finalId = "oil" + newId.toString();
-    super("oil", "mining", finalId, 1000, 1000,0, "nothing",0, 0, 1000, "oil",0, 1);
+    OilSTORAGE.id++;
+    let finalId = "GOLDStorage" + OilSTORAGE.id.toString();
+    super(
+      "oil",
+      "mining",
+      finalId,
+      1000,
+      1000,
+      0,
+      "nothing",
+      0,
+      0,
+      1000,
+      "oil",
+      0,
+      1
+    );
   }
 }
 /*

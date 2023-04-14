@@ -1,12 +1,25 @@
-import Military from "../allInstance.js";
-    let id = -1;
-let newId = 0
-export class Cannon extends Military {
-  newId = id + 1;
-  id = id +1
+import { Batiment } from "../allInstance.js";
+
+export class Cannon extends Batiment {
+  static id = 0;
   constructor() {
-    let finalId = "cannon" + newId.toString();
-    super("milice", "defense", finalId, 40, 150,90,"nothing",0,0,0,"nothing",0, 1);
+    Cannon.id++;
+    let finalId = "cannon" + Cannon.id.toString();
+    super(
+      "milice",
+      "defense",
+      finalId,
+      40,
+      150,
+      90,
+      "nothing",
+      0,
+      0,
+      0,
+      "nothing",
+      0,
+      1
+    );
   }
 }
 

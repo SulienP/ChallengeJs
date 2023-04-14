@@ -2,6 +2,7 @@ import "../../../css/card.css";
 import { Button } from "@mantine/core";
 import buy from "../../gameManager/buy.js"
 import React, { useState } from "react";
+import GameManager from "../../gameManager/gameManager";
 function Card() {
     const [buttonDisplay , buttonDisplaySetState] = useState(true)
     const [militaryState, militarySetState] = useState(false);
@@ -69,16 +70,19 @@ function Card() {
                 }}
               >
                 <Button
-$                  variant="gradient"
+                  $
+                  variant="gradient"
                   gradient={{ from: "indigo", to: "cyan", deg: 105 }}
-                  onClick={() => test( "zehi")}
+                  onClick={() => test(["buy", "military", "oil", 150, "zehi"])}
                 >
                   ZEHI: XXXoil
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() => test( "militaryBase")}
+                  onClick={() =>
+                    test(["buy", "military", "oil", 150, "militaryBase"])
+                  }
                 >
                   MilitaryBase XXXXor XXX oil
                 </Button>
@@ -109,21 +113,21 @@ $                  variant="gradient"
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("mairie")}
+                  onClick={() => test("mairie")}
                 >
                   Mairie 0 or
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("strongBoxe")}
+                  onClick={() => test("strongBoxe")}
                 >
                   Or Storage 110 oil
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("silot")}
+                  onClick={() => test("silot")}
                 >
                   Oil Storage 100 or
                 </Button>
@@ -140,9 +144,7 @@ $                  variant="gradient"
           >
             Defense
           </Button>
-          <div
-            style={{ display: defenseState ? "block" : "none" }}
-          >
+          <div style={{ display: defenseState ? "block" : "none" }}>
             <div className="all">
               <Button.Group
                 orientation="vertical"
@@ -153,23 +155,23 @@ $                  variant="gradient"
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("milice")}
+                  onClick={() => test("milice")}
                 >
                   Milice XXXX
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("cannon")}
+                  onClick={() => test("cannon")}
                 >
-                  Cannon XXXXX 
+                  Cannon XXXXX
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("laser")}
+                  onClick={() => test("laser")}
                 >
-                  Laser XXXX 
+                  Laser XXXX
                 </Button>
               </Button.Group>
             </div>
@@ -195,16 +197,16 @@ $                  variant="gradient"
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("mine")}
+                  onClick={() => test("mine")}
                 >
-                  Mine  XXXX
+                  Mine XXXX
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("drilingMachine")}
+                  onClick={() => test("drilingMachine")}
                 >
-                  Driling oil XXXX 
+                  Driling oil XXXX
                 </Button>
               </Button.Group>
             </div>
@@ -233,21 +235,21 @@ $                  variant="gradient"
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("hologram")}
+                  onClick={() => test("hologram")}
                 >
-                  Hologram xxxx 
+                  Hologram xxxx
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("banch")}
+                  onClick={() => test("banch")}
                 >
                   Banch XXXX
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
-                  onClick={() =>test("pub")}
+                  onClick={() => test("pub")}
                 >
                   Pub XXXX
                 </Button>
@@ -260,7 +262,7 @@ $                  variant="gradient"
   );
 }
 function test(value) {
-  buy(value)
+  GameManager(value)
 }
 
 export default Card;

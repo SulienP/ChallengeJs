@@ -1,11 +1,11 @@
 import Decoration from "../allInstance.js";
-    let id = -1;
-    let newId = 0;
-export class Banch extends Decoration {
-  newId = id + 1;
-  id = id +1
+
+export class Holograme extends Decoration {
+  static id = 0;
+
   constructor() {
-    let finalId = "banch" + newId.toString();
-    super("Holograme", "decoration", finalId,0);
+    Holograme.id ++
+    let finalId = "Holograme" + Holograme.id.toString();
+    super("Holograme", "decoration", finalId, 0);
   }
 }

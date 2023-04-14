@@ -4,3 +4,5 @@
 function fight(){
     
 }
+
+export default fight;

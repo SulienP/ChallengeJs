@@ -18,12 +18,11 @@ function StartGame() {
   let oilMine = new OILMINE();
   myMairie.currentNumber++;
   myMairie.currentNumberGOldMining.push(goldMine);
-   myMairie.currentNumberOilMining.push(oilMine);
+  myMairie.currentNumberOilMining.push(oilMine);
   myMairie.currentNumberGOldStorage.push(GoldStorage);
-  myMairie.currentNumberOilMining.push(oilStorage);
+  myMairie.currentNumberOilStorage.push(oilStorage);
   myMairie.maxGoldRessource = GoldStorage.maxStorage;
   myMairie.maxOIlStorage = oilStorage.maxStorage;
-
-    return myMairie;
+  localStorage.setItem("myMairie", JSON.stringify(myMairie));
 }
 export default StartGame;
