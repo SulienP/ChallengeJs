@@ -10,8 +10,8 @@ function Sop() {
   return (
     <>
       <Button
-        ariant="gradient"
-        gradient={{ from: "indigo", to: "cyan" }}
+        variant="subtle"
+        color="indigo"
         id="shop"
         onClick={inverseDisplay}
         size="xl"

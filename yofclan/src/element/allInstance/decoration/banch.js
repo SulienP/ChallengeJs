@@ -1,6 +1,6 @@
-import Decoration from "../allInstance.js"
+import { Batiment } from "../allInstance.js";
 
-export class Banch extends Decoration {
+export class Banch extends Batiment {
   static id = 0;
 
   constructor() {

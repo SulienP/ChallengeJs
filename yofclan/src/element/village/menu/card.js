@@ -123,7 +123,7 @@ function Card() {
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
                   onClick={() =>
-                    sendBuy(["buy", "ressource", "or", 150, "oilStorage"])
+                    sendBuy(["buy", "ressource", "gold", 150, "oilStorage"])
                   }
                 >
                   Oil Storage 100 or

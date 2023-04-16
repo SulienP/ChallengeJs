@@ -4,21 +4,29 @@ import "../../../css/barProgress.css";
 /* 
  ! TODO ajout d'un progression en fonction d'une valeur
 */
-function oilBar() {
+
+function OilBar() {
+  console.log("asqdfgh")
+   let element = localStorage.getItem("myMairie");
+  const myMairie = JSON.parse(element);
+    let value = (myMairie.currentOil * 100) / myMairie.maxOIlRessource;
   return (
     <Progress
       color="indigo"
       radius="xl"
-      label="oil:"
+      label={`oil: ${myMairie.currentOil} / ${myMairie.maxOIlRessource}`}
       size="lg"
-          value={15}
-          style={{
-        position: 'absolute',
-        top: '20px',
-        right: '0',
-        width: '20%',
-        height: '20px',
-    }}    />
+      value={value}
+      style={{
+        position: "absolute",
+        top: "20px",
+        right: "0",
+        width: "20%",
+        height: "20px",
+      }}
+    />
   );
 }
-export default oilBar;
+
+
+export default OilBar;

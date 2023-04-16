@@ -1,11 +1,24 @@
-import Decoration from "../allInstance.js";
+import { Batiment } from "../allInstance.js";
 
-export class Pub extends Decoration {
+export class Pub extends Batiment {
   static id = 0;
 
   constructor() {
     Pub.id++;
-    let finalId = "Pub" + Pub.newId.toString();
-    super("Pub", "decoration", finalId, 0);
+    let finalId = "holograme" + Pub.id.toString();
+    super(
+      "holograme",
+      "decoration",
+      finalId,
+      0,
+      30,
+      "nothing",
+      0,
+      0,
+      0,
+      "nothing",
+      0,
+      0
+    );
   }
 }
