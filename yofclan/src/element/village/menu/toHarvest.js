@@ -1,9 +1,10 @@
 import { Button } from "@mantine/core";
-
+import "../../../css/harvest.css"
 function Harvest() {
   return (
     <>
-      <Button variant="subtle" color="yellow" size="xl">
+      <Button variant="subtle" id="button" color="yellow" size="xl">
+
         harvest
       </Button>
     </>
