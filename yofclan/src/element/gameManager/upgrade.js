@@ -1,3 +1,3 @@
-function upgrade() {
+function upgrade(batiment) {
     
 }

@@ -1,0 +1,62 @@
+console.log(element, "llllllllllll");
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+  const batiment = new Image();
+  if (element !== undefined) {
+    switch (element[1]) {
+      case "military":
+        if (element[4] === "zehi") {
+          batiment.src = "../../picture/mili/zehi.png";
+        } else if (element[4] === "militaryBase") {
+          batiment.src = "../../picture/mili/camps.png";
+        }
+        break;
+      case "ressource":
+        if (element[4] === "goldStorage") {
+          batiment.src = "../../picture/ressource/gold.png";
+        } else if (element[4] === "oilStorage") {
+          batiment.src = "../../picture/ressource/oil.png";
+        }
+        break;
+      case "defense":
+        if (element[4] === "milice") {
+          batiment.src = "../../picture/defense/milice.png";
+        } else if (element[4] === "cannon") {
+          batiment.src = "../../picture/defense/cannon.png";
+        } else if (element[4] === "laser") {
+          batiment.src = "../../picture/defense/laser.png";
+        }
+        break;
+      case "mining":
+        if (element[4] === "goldMine") {
+          batiment.src = "../../picture/mine/goldMine.png";
+        } else if (element[4] === "oilMine") {
+          batiment.src = "../../picture/mine/oil.png";
+        }
+        break;
+      case "decoration":
+        if (element[4] === "hologram") {
+          batiment.src = "../../picture/decoration/hologramme.png";
+        } else if (element[4] === "banch") {
+          batiment.src = "../../picture/decoration/banch.png";
+        } else if (element[4] === "pub") {
+          batiment.src = "../../picture/decoration/pub.png";
+        }
+        break;
+      default:
+        break;
+    }
+    batiment.src.addEventListener(
+      "load",
+      function () {
+        ctx.drawImage(batiment.src, 75, 25);
+      },
+      false
+    );
+  } else {
+    console.log("normal");
+  }
+  canvas.addEventListener("click", function (batiment) {
+    gameManager(["upgrade", batiment]);
+  });
+}
