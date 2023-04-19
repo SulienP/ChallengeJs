@@ -1,0 +1,118 @@
+{
+    "id" :0,
+    "mairie" :[
+        {
+            "name" : "",
+            "type" : "ressource",
+            "id": "",
+            "nbrMax":0,
+            "defense":0,
+            "currentNumber":0,
+            "level":0,
+            "price": 0,
+            "ameliorationPrice": 0,
+            "maxOilMining":0,
+            "maxGOldMining":0,
+            "maxGOldStorage":0,
+            "maxOIlStorage":0,
+            "maxDefense":0 ,
+            "currentNumberOilMining":[{
+                "name": "",
+                "type": "",
+                "id":"",
+                "price":0,
+                "ameliorationPrice":0,
+                "defense": 0,
+                "typeProductions":"",
+                "productionByHour":0,
+                "productionMax":0,
+                "maxStorage":0,
+                "storageType":"",
+                "currentStockage":0,
+                "level":0
+            }],
+            "currentNumberGOldMining":[{
+                "name": "",
+                "type": "",
+                "id": "",
+                "price": 0,
+                "ameliorationPrice": 0,
+                "defense": 0,
+                "typeProductions": "",
+                "productionByHour": 0,
+                "productionMax": 0,
+                "maxStorage": 0,
+                "storageType": "",
+                "currentStockage": 0,
+                "level": 0
+            }],
+            "currentNumberGOldStorage":[
+            {
+                "name": "",
+                "type": "",
+                "id": "",
+                "price": 0,
+                "ameliorationPrice": 0,
+                "defense": 0,
+                "typeProductions": "",
+                "productionByHour": 0,
+                "productionMax": 0,
+                "maxStorage": 0,
+                "storageType": "",
+                "currentStockage": 0,
+                "level": 0
+            }
+             ],
+             "currentNumberDefense":[
+             {
+                "name": "",
+                "type": "",
+                "id": "",
+                "price": 0,
+                "ameliorationPrice": 0,
+                "defense": 0,
+                "typeProductions": "",
+                "productionByHour": 0,
+                "productionMax": 0,
+                "maxStorage": 0,
+                "storageType": "",
+                "currentStockage": 0,
+                "level": 0
+            }
+            ],
+            "currentNumberOilStorage": [{
+                "name": "",
+                "type": "",
+                "id": "",
+                "price": 0,
+                "ameliorationPrice": 0,
+                "defense": 0,
+                "typeProductions": "",
+                "productionByHour": 0,
+                "productionMax": 0,
+                "maxStorage": 0,
+                "storageType": "",
+                "currentStockage": 0,
+                "level": 0
+            }],
+            "maxMilitary":0,
+            "currentMilitaryBat": [{
+                "name": "",
+                "type": "",
+                "id": "",
+                "price": 0,
+                "ameliorationPrice": 0,
+                "defense": 0,
+                "typeProductions": "",
+                "productionByHour": 0,
+                "productionMax": 0,
+                "maxStorage": 0,
+                "storageType": "",
+                "currentStockage": 0,
+                "level": 0
+            }],
+            "currentOil":0,
+            "currentGold":0
+        }
+    ]
+}
