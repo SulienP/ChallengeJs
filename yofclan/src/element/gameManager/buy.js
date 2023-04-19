@@ -29,7 +29,7 @@ function buy(value) {
           localStorage.setItem("myMairie", JSON.stringify(myMairie));
             OilBar()
             
-          Village(value)
+
           return true;
           case "militaryBase":
           newBat = new Camps();  
@@ -37,7 +37,7 @@ function buy(value) {
           myMairie.currentOil = myMairie.currentOil - value[3];
           localStorage.setItem("myMairie", JSON.stringify(myMairie));
           OilBar();
-          Village(value);
+;
           return true;
           
           default:
@@ -61,7 +61,7 @@ function buy(value) {
             myMairie.currentOil = myMairie.currentOil - value[3];
             localStorage.setItem("myMairie", JSON.stringify(myMairie));
             OilBar();
-            Village(value);
+  ;
             return true;
           }
         }
@@ -75,7 +75,7 @@ function buy(value) {
               myMairie.currentNumberOilStorage.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-              Village(value);
+    ;
               
               GoldBar();
               return true;
@@ -95,7 +95,7 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-              Village(value);    
+    ;    
               GoldBar();
               return true;
             }
@@ -109,7 +109,7 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-              Village(value);
+    ;
               GoldBar();
               return true;
             }
@@ -122,7 +122,7 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-              Village(value);      
+    ;      
               GoldBar();
               return true;
             }
@@ -143,7 +143,7 @@ function buy(value) {
                   myMairie.currentNumberGOldMining.push(newBat);
                   myMairie.currentOil = myMairie.currentOil - value[3];
                   localStorage.setItem("myMairie", JSON.stringify(myMairie));
-                  Village(value);
+        ;
                   
                   OilBar();
                   return true;
@@ -159,7 +159,7 @@ function buy(value) {
                   myMairie.currentNumberOilMining.push(newBat);
                   myMairie.currentGold = myMairie.currentGold - value[3];
                   localStorage.setItem("myMairie", JSON.stringify(myMairie));
-                  Village(value);
+        ;
                   
                   OilBar();
                   return true;
@@ -174,7 +174,7 @@ function buy(value) {
               newBat = new Holograme();
               myMairie.currentOil = myMairie.currentOil - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-              Village(value); 
+    ; 
               OilBar();
               return true;
             }
@@ -184,7 +184,7 @@ function buy(value) {
               newBat = new Banch();
               myMairie.currentOil = myMairie.currentOil - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-              Village(value); 
+    ; 
               OilBar();
               return true;
             }    
@@ -194,7 +194,7 @@ function buy(value) {
               newBat = new Pub();
               myMairie.currentOil = myMairie.currentOil - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-              Village(value);
+    ;
               
               OilBar();
               return true;

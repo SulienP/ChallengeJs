@@ -22,7 +22,12 @@ function StartGame() {
   myMairie.currentNumberGOldStorage.push(GoldStorage);
   myMairie.currentNumberOilStorage.push(oilStorage);
   myMairie.maxGoldRessource = GoldStorage.maxStorage;
-  myMairie.maxOIlRessource= oilStorage.maxStorage;
-  localStorage.setItem("myMairie", JSON.stringify(myMairie));
+  myMairie.maxOIlRessource = oilStorage.maxStorage;
+window.addEventListener("beforeunload", () => {
+  if (myMairie) {
+    localStorage.setItem("myMairie", JSON.stringify(myMairie));
+  }
+});
+  
 }
 export default StartGame;

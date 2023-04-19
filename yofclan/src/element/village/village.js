@@ -5,8 +5,6 @@ import gameManager from "../gameManager/gameManager.js";
 */
 
   function Village() {
-  
- 
     return (
       <div className="village">
         <canvas id="myVillage" height="170" width="260" style={{
