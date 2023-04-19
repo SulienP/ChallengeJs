@@ -1,5 +1,5 @@
 import { Button } from "@mantine/core";
-import "../../../css/harvest.css"
+// import "../../../css/harvest.css"
 function Harvest() {
   return (
     <>
