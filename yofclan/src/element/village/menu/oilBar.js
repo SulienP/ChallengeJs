@@ -6,10 +6,11 @@ import "../../../css/barProgress.css";
 */
 
 function OilBar() {
-  console.log("asqdfgh")
    let element = localStorage.getItem("myMairie");
   const myMairie = JSON.parse(element);
-    let value = (myMairie.currentOil * 100) / myMairie.maxOIlRessource;
+  let value = (myMairie.currentOil * 100) / myMairie.maxOIlRessource;
+  // window.location.reload();
+
   return (
     <Progress
       color="indigo"
@@ -24,7 +25,10 @@ function OilBar() {
         width: "20%",
         height: "20px",
       }}
+
     />
+   
+
   );
 }
 

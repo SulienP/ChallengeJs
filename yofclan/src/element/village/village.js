@@ -1,5 +1,4 @@
 import '../../css/index.css'
-import gameManager from "../gameManager/gameManager.js";
 /*
   TODO: Déplacement des batiments 
 */

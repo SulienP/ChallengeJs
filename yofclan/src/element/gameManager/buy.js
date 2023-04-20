@@ -13,7 +13,7 @@ import { Holograme } from "../allInstance/decoration/holograme.js"
 import { Pub } from "../allInstance/decoration/pub.js";
 import GoldBar from "../../element/village/menu/orBar.js"
 import OilBar from "../../element/village/menu/oilBar.js"
-import Village  from "../village/village.js";
+//import Village  from "../village/village.js";
 function buy(value) {
   let element = localStorage.getItem('myMairie')
   const myMairie = JSON.parse(element);
@@ -27,9 +27,8 @@ function buy(value) {
           myMairie.currentMilitaryBat.push(newBat);
           myMairie.currentOil = myMairie.currentOil - value[3];
           localStorage.setItem("myMairie", JSON.stringify(myMairie));
-            OilBar()
-            
-
+          OilBar()
+           Reload();
           return true;
           case "militaryBase":
           newBat = new Camps();  
@@ -37,9 +36,8 @@ function buy(value) {
           myMairie.currentOil = myMairie.currentOil - value[3];
           localStorage.setItem("myMairie", JSON.stringify(myMairie));
           OilBar();
-;
-          return true;
-          
+            Reload();
+            return true;
           default:
           break;
         }  
@@ -60,8 +58,8 @@ function buy(value) {
             myMairie.currentNumberGOldStorage.push(newBat);
             myMairie.currentOil = myMairie.currentOil - value[3];
             localStorage.setItem("myMairie", JSON.stringify(myMairie));
-            OilBar();
-  ;
+          OilBar();
+           Reload();
             return true;
           }
         }
@@ -75,9 +73,9 @@ function buy(value) {
               myMairie.currentNumberOilStorage.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-    ;
-              
-              GoldBar();
+              ;
+            GoldBar();
+              Reload();
               return true;
             }
           }
@@ -90,13 +88,13 @@ function buy(value) {
           case "milice":
           if (myMairie.currentGold > value[3]) {
             if (myMairie.currentNumberDefense.length < myMairie.maxDefense) {
-              
               newBat = new Milice();
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-    ;    
+              ;    
               GoldBar();
+               Reload();
               return true;
             }
           }
@@ -104,13 +102,12 @@ function buy(value) {
           case "cannon":
           if (myMairie.currentGold > value[3]) {
             if (myMairie.currentNumberDefense.length < myMairie.maxDefense) {
-              
               newBat = new Cannon();
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-    ;
               GoldBar();
+               Reload();
               return true;
             }
           }
@@ -122,8 +119,9 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-    ;      
+     
               GoldBar();
+               Reload();
               return true;
             }
           }
@@ -137,15 +135,13 @@ function buy(value) {
             if (myMairie.currentOil > value[3]) {
               if (
                 myMairie.currentNumberGOldMining.length < myMairie.maxGOldMining
-                ) {
-                  
+                ) {    
                   newBat = new GoldMine();
                   myMairie.currentNumberGOldMining.push(newBat);
                   myMairie.currentOil = myMairie.currentOil - value[3];
                   localStorage.setItem("myMairie", JSON.stringify(myMairie));
-        ;
-                  
-                  OilBar();
+                OilBar();
+                 Reload();
                   return true;
                 }
               }
@@ -154,14 +150,13 @@ function buy(value) {
             if (value[4] === "oilMine") {
               if (myMairie.currentGold > value[3]) {
                 if (myMairie.currentNumberOilMining.length < myMairie.maxOilMining) {
-                  
+               
                   newBat = new OILMINE();
                   myMairie.currentNumberOilMining.push(newBat);
                   myMairie.currentGold = myMairie.currentGold - value[3];
                   localStorage.setItem("myMairie", JSON.stringify(myMairie));
-        ;
-                  
                   OilBar();
+                   Reload();
                   return true;
                 }
               }
@@ -174,8 +169,8 @@ function buy(value) {
               newBat = new Holograme();
               myMairie.currentOil = myMairie.currentOil - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-    ; 
               OilBar();
+               Reload();
               return true;
             }
             break;
@@ -184,8 +179,8 @@ function buy(value) {
               newBat = new Banch();
               myMairie.currentOil = myMairie.currentOil - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-    ; 
               OilBar();
+              Reload();
               return true;
             }    
             break;
@@ -194,9 +189,8 @@ function buy(value) {
               newBat = new Pub();
               myMairie.currentOil = myMairie.currentOil - value[3];
               localStorage.setItem("myMairie", JSON.stringify(myMairie));
-    ;
-              
               OilBar();
+               Reload();
               return true;
             }
             break;
@@ -207,3 +201,6 @@ function buy(value) {
       }
       
       export default buy;
+      function Reload() {
+        window.location.reload();
+      }

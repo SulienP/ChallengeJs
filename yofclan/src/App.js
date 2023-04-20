@@ -8,18 +8,11 @@ import GameManager from "../src/element/gameManager/gameManager.js";
 import Attaque from "../src/element/village/menu/attaque.js";
 import Harvest  from './element/village/menu/toHarvest.js';
 function App() {
-    const [data, setData] = React.useState(null);
-
-    React.useEffect(() => {
-      fetch("/api")
-        .then((response) => response.json())
-        .then((data) => setData(data));
-    }, []);
-    console.log(data);
+  
   return (
     <>
         <GameManager></GameManager>
-        <GoldBar></GoldBar>
+      <GoldBar></GoldBar>
       <OilBar></OilBar>
       <Attaque></Attaque>
      <Village></Village>
