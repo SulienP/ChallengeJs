@@ -3,7 +3,8 @@ import '../../css/index.css'
   TODO: Déplacement des batiments 
 */
 
-  function Village() {
+function Village() {
+
     return (
       <div className="village">
         <canvas id="myVillage" height="170" width="260" style={{
@@ -12,7 +13,9 @@ import '../../css/index.css'
         </canvas>
       </div>
     );
-  }
+    
+}
+  
 
 
 export default Village;

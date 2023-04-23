@@ -6,12 +6,14 @@ import OilBar from '../src/element/village/menu/oilBar.js'
 import GoldBar from "../src/element/village/menu/orBar.js";
 import GameManager from "../src/element/gameManager/gameManager.js";
 import Attaque from "../src/element/village/menu/attaque.js";
-import Harvest  from './element/village/menu/toHarvest.js';
+import Harvest from './element/village/menu/toHarvest.js';
+import AddButtonRessource from "../src/element/village/menu/addButtonRessouce.js";
 function App() {
   
   return (
     <>
-        <GameManager></GameManager>
+      <GameManager></GameManager>
+      <AddButtonRessource></AddButtonRessource>
       <GoldBar></GoldBar>
       <OilBar></OilBar>
       <Attaque></Attaque>

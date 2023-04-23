@@ -4,6 +4,8 @@ import { OilSTORAGE } from "../allInstance/ressource/oilStock.js";
 import { GoldMine } from "../allInstance/mining/gold.js";
 import { OILMINE } from "../allInstance/mining/oil.js";
 
+
+
 /*
     TODO: Gestion des instances, récupération des id
     TODO: Sauvegarde du jeu
@@ -23,11 +25,10 @@ function StartGame() {
   myMairie.currentNumberOilStorage.push(oilStorage);
   myMairie.maxGoldRessource = GoldStorage.maxStorage;
   myMairie.maxOIlRessource = oilStorage.maxStorage;
-window.addEventListener("beforeunload", () => {
-  if (myMairie) {
+  const firstDate = Date.now()
+  localStorage.setItem("firstDate", JSON.stringify(firstDate));
     localStorage.setItem("myMairie", JSON.stringify(myMairie));
-  }
-});
-  
+
+
 }
 export default StartGame;

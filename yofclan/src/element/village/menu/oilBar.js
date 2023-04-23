@@ -9,7 +9,6 @@ function OilBar() {
    let element = localStorage.getItem("myMairie");
   const myMairie = JSON.parse(element);
   let value = (myMairie.currentOil * 100) / myMairie.maxOIlRessource;
-  // window.location.reload();
 
   return (
     <Progress
