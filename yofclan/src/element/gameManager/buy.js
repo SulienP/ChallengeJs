@@ -13,7 +13,6 @@ import { Holograme } from "../allInstance/decoration/holograme.js"
 import { Pub } from "../allInstance/decoration/pub.js";
 import GoldBar from "../../element/village/menu/orBar.js"
 import OilBar from "../../element/village/menu/oilBar.js"
-//import Village  from "../village/village.js";
 function buy(value) {
   let element = localStorage.getItem('myMairie')
   const myMairie = JSON.parse(element);
@@ -192,15 +191,14 @@ function buy(value) {
               OilBar();
                Reload();
               return true;
-            }
-            break;
-            default:
-            break;
           }
-        }
+        break;
+      default:
+        break;
       }
-      
-      export default buy;
-      function Reload() {
-        window.location.reload();
-      }
+    }
+  }    
+  export default buy;
+  function Reload() {
+  window.location.reload();
+}

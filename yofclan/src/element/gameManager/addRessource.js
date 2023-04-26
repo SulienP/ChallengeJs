@@ -9,12 +9,20 @@ function AddRessource() {
   let difference = 0;
   difference = myDateInHour - lastConnectionInHour;
   difference = Math.trunc(difference)
-  console.log(difference, "difference")
-    for (const element of myMairie.currentNumberGOldMining) {
-        myMairie.currentGold = (myMairie.currentGold + element.productionByHour* difference);
+  let production = 0;
+  for (const element of myMairie.currentNumberGOldMining) {
+    production = element.productionByHour * difference
+    if (production > element.productionMax) {
+      production = element.productionMax
+    }
+        myMairie.currentGold = (myMairie.currentGold + production);
     }
   for (const element of myMairie.currentNumberOilMining) {
-    myMairie.currentOil = (myMairie.currentOil + element.productionByHour * difference);
+        production = element.productionByHour * difference;
+        if (production > element.productionMax) {
+          production = element.productionMax;
+        }
+    myMairie.currentOil = (myMairie.currentOil + production);
   }
   if (myMairie.currentGold > myMairie.maxGoldRessource) {
     myMairie.currentGold = myMairie.maxGoldRessource;

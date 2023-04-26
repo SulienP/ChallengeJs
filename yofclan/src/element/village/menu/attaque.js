@@ -1,5 +1,4 @@
 import { Button } from "@mantine/core";
-import "../../gameManager/gameManager.js"
 import GameManager from "../../gameManager/gameManager.js";
 /* 
  ! TODO ajout d'un progression en fonction d'une valeur
