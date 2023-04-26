@@ -1,18 +1,17 @@
-.card {
+.Card {
     position: absolute;
     bottom: 0%;
-    margin-left: 8%;
+    margin-left: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 18rem;
     height: 14rem;
-    background-color: #000000;
-    size: 80px;
+    background-color: rgb(0, 0, 0);
     border-radius: 10px;
     text-decoration: none;
 }
 
-.card:hover {
+.Card:hover {
     background-color: #000000;
 }
 

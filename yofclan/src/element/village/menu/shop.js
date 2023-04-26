@@ -1,8 +1,7 @@
-import "../../../css/shop.css";
 import { Button } from "@mantine/core";
 import React, { useState } from "react";
 import Card from "./card";
-function Sop() {
+function Shop() {
   const [state, setState] = useState(false);
   function inverseDisplay() {
       setState(!state)
@@ -14,7 +13,7 @@ function Sop() {
         color="indigo"
         id="shop"
         onClick={inverseDisplay}
-        size="xl"
+
       >
         Shop
       </Button>
@@ -24,4 +23,4 @@ function Sop() {
     </>
   );
 }
-export default Sop;
+export default Shop;

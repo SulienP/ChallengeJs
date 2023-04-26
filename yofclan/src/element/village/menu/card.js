@@ -1,6 +1,5 @@
 import "../../../css/card.css";
 import { Button } from "@mantine/core";
-import buy from "../../gameManager/buy.js"
 import React, { useState } from "react";
 import GameManager from "../../gameManager/gameManager";
 function Card() {
@@ -46,7 +45,7 @@ function Card() {
   }     
   return (
     <>
-      <div className="card">
+      <div class="Card">
         <div className="container">
           <Button
             variant="gradient"

@@ -6,12 +6,11 @@ function AddButtonRessource() {
         <Button
           variant="subtle"
           color="indigo"
-          id="shop"
+          id="AddButtonRessource"
           onClick={AddRessource}
-          style={{
-            right: "0",
-          }}
-        >Add ressource</Button>
+        >
+          Add ressource
+        </Button>
       </>
     );
 }

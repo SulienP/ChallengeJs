@@ -37,3 +37,33 @@
   }
 }
 
+.AddButtonRessource {
+  position: absolute;
+  bottom:0%;
+  right: 0%;
+}
+
+.Attaque{
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 5%;
+  height: 5%;
+  
+}
+
+
+.Shop{
+  position: absolute;
+  bottom: 0%;
+  color: #ffffff;
+}
+
+.Village {
+  position: absolute;
+  background-color: red;
+  top: 6%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+}

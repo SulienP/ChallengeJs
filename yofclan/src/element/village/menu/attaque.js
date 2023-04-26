@@ -7,13 +7,7 @@ import GameManager from "../../gameManager/gameManager.js";
 function Attaque() {
   return (
     <Button variant="subtle" color="red"
-      style={{
-        position: "absolute",
-        top: "0",
-        left: "0",
-        width: "5%",
-        height: "5%",
-      }}
+
       onClick={GameManager(["fight"])}> Fight
     </Button>
   );
