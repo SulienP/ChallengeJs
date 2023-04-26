@@ -1,6 +1,4 @@
-/*
-  TODO: Déplacement des batiments 
-*/
+import "./test.js"
 
 function Village() {
 

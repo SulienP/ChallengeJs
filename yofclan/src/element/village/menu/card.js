@@ -74,7 +74,7 @@ function Card() {
                   gradient={{ from: "indigo", to: "cyan", deg: 105 }}
                   onClick={() => sendBuy(["buy", "military", "oil", 150, "zehi"])}
                 >
-                  ZEHI: XXXoil
+                  ZEHI: 150 oil
                 </Button>
                 <Button
                   variant="gradient"
@@ -83,7 +83,7 @@ function Card() {
                     sendBuy(["buy", "military", "oil", 150, "militaryBase"])
                   }
                 >
-                  MilitaryBase XXXXor XXX oil
+                  MilitaryBase 150 Oil
                 </Button>
               </Button.Group>
             </div>
@@ -116,7 +116,7 @@ function Card() {
                     sendBuy(["buy", "ressource", "oil", 150, "goldStorage"])
                   }
                 >
-                  Gold Storage 110 oil
+                  Gold Storage 150 oil
                 </Button>
                 <Button
                   variant="gradient"
@@ -125,7 +125,7 @@ function Card() {
                     sendBuy(["buy", "ressource", "gold", 150, "oilStorage"])
                   }
                 >
-                  Oil Storage 100 or
+                  Oil Storage 150 or
                 </Button>
               </Button.Group>
             </div>
@@ -153,21 +153,21 @@ function Card() {
                   gradient={{ from: "indigo", to: "cyan" }}
                   onClick={() => sendBuy(["buy", "defense", "or", 150, "milice"])}
                 >
-                  Milice XXXX
+                  Milice 150 Gold
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
                   onClick={() => sendBuy(["buy", "defense", "or", 150, "cannon"])}
                 >
-                  Cannon XXXXX
+                  Cannon 150 Gold
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
                   onClick={() => sendBuy(["buy", "defense", "or", 150, "laser"])}
                 >
-                  Laser XXXX
+                  Laser 150 Gold
                 </Button>
               </Button.Group>
             </div>
@@ -197,14 +197,14 @@ function Card() {
                     sendBuy(["buy", "mining", "oil", 150, "goldMine"])
                   }
                 >
-                  Mine XXXX
+                  Mine 150 Oil
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
                   onClick={() => sendBuy(["buy", "mining", "or", 150, "oilMine"])}
                 >
-                  Oil mine XXXX
+                  Oil mine 150 Gold
                 </Button>
               </Button.Group>
             </div>
@@ -237,7 +237,7 @@ function Card() {
                     sendBuy(["buy", "decoration", "oil", 150, "hologram"])
                   }
                 >
-                  Hologram xxxx
+                  Hologram 150 Oil
                 </Button>
                 <Button
                   variant="gradient"
@@ -246,14 +246,14 @@ function Card() {
                     sendBuy(["buy", "decoration", "oil", 150, "banch"])
                   }
                 >
-                  Banch XXXX
+                  Banch 150 Oil
                 </Button>
                 <Button
                   variant="gradient"
                   gradient={{ from: "indigo", to: "cyan" }}
                   onClick={() => sendBuy(["buy", "decoration", "oil", 150, "pub"])}
                 >
-                  Pub XXXX
+                  Pub 150 Oil
                 </Button>
               </Button.Group>
             </div>

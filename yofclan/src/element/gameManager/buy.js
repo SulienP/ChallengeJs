@@ -13,6 +13,9 @@ import { Holograme } from "../allInstance/decoration/holograme.js"
 import { Pub } from "../allInstance/decoration/pub.js";
 import GoldBar from "../../element/village/menu/orBar.js"
 import OilBar from "../../element/village/menu/oilBar.js"
+import test from "../../element/village/test.js"
+import Reload from "./reload.js";
+import toLocalStorage from "./toLocalStorage.js";
 function buy(value) {
   let element = localStorage.getItem('myMairie')
   const myMairie = JSON.parse(element);
@@ -25,18 +28,19 @@ function buy(value) {
           newBat = new Zehi();
           myMairie.currentMilitaryBat.push(newBat);
           myMairie.currentOil = myMairie.currentOil - value[3];
-          localStorage.setItem("myMairie", JSON.stringify(myMairie));
-          OilBar()
-           Reload();
+          toLocalStorage(myMairie);
+            OilBar()
+            test();
+            //Reload();
           return true;
           case "militaryBase":
           newBat = new Camps();  
           myMairie.currentMilitaryBat.push(newBat);
           myMairie.currentOil = myMairie.currentOil - value[3];
-          localStorage.setItem("myMairie", JSON.stringify(myMairie));
+          toLocalStorage(myMairie);
           OilBar();
-            Reload();
-            return true;
+          Reload();
+          return true;
           default:
           break;
         }  
@@ -56,9 +60,9 @@ function buy(value) {
             newBat = new GOLDStorage();
             myMairie.currentNumberGOldStorage.push(newBat);
             myMairie.currentOil = myMairie.currentOil - value[3];
-            localStorage.setItem("myMairie", JSON.stringify(myMairie));
-          OilBar();
-           Reload();
+            toLocalStorage(myMairie);
+            OilBar();
+            Reload();
             return true;
           }
         }
@@ -71,9 +75,8 @@ function buy(value) {
               newBat = new OilSTORAGE();
               myMairie.currentNumberOilStorage.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
-              localStorage.setItem("myMairie", JSON.stringify(myMairie));
-              ;
-            GoldBar();
+              toLocalStorage(myMairie);;
+              GoldBar();
               Reload();
               return true;
             }
@@ -90,10 +93,9 @@ function buy(value) {
               newBat = new Milice();
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
-              localStorage.setItem("myMairie", JSON.stringify(myMairie));
-              ;    
+              toLocalStorage(myMairie)              ;    
               GoldBar();
-               Reload();
+              Reload();
               return true;
             }
           }
@@ -104,9 +106,9 @@ function buy(value) {
               newBat = new Cannon();
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
-              localStorage.setItem("myMairie", JSON.stringify(myMairie));
+              toLocalStorage(myMairie);
               GoldBar();
-               Reload();
+              Reload();
               return true;
             }
           }
@@ -117,10 +119,9 @@ function buy(value) {
               newBat = new Laser();
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
-              localStorage.setItem("myMairie", JSON.stringify(myMairie));
-     
+              toLocalStorage(myMairie);  
               GoldBar();
-               Reload();
+              Reload();
               return true;
             }
           }
@@ -138,9 +139,9 @@ function buy(value) {
                   newBat = new GoldMine();
                   myMairie.currentNumberGOldMining.push(newBat);
                   myMairie.currentOil = myMairie.currentOil - value[3];
-                  localStorage.setItem("myMairie", JSON.stringify(myMairie));
-                OilBar();
-                 Reload();
+                  toLocalStorage(myMairie);
+                  OilBar();
+                  Reload();
                   return true;
                 }
               }
@@ -149,13 +150,13 @@ function buy(value) {
             if (value[4] === "oilMine") {
               if (myMairie.currentGold > value[3]) {
                 if (myMairie.currentNumberOilMining.length < myMairie.maxOilMining) {
-               
+                  
                   newBat = new OILMINE();
                   myMairie.currentNumberOilMining.push(newBat);
                   myMairie.currentGold = myMairie.currentGold - value[3];
-                  localStorage.setItem("myMairie", JSON.stringify(myMairie));
+                  toLocalStorage(myMairie);
                   OilBar();
-                   Reload();
+                  Reload();
                   return true;
                 }
               }
@@ -167,9 +168,9 @@ function buy(value) {
             if (myMairie.currentOil > value[3]) {
               newBat = new Holograme();
               myMairie.currentOil = myMairie.currentOil - value[3];
-              localStorage.setItem("myMairie", JSON.stringify(myMairie));
+              toLocalStorage(myMairie);
               OilBar();
-               Reload();
+              Reload();
               return true;
             }
             break;
@@ -177,7 +178,7 @@ function buy(value) {
             if(myMairie.currentOil > value[3]) {
               newBat = new Banch();
               myMairie.currentOil = myMairie.currentOil - value[3];
-              localStorage.setItem("myMairie", JSON.stringify(myMairie));
+              toLocalStorage(myMairie);
               OilBar();
               Reload();
               return true;
@@ -187,18 +188,15 @@ function buy(value) {
             if (myMairie.currentOil > value[3]) {
               newBat = new Pub();
               myMairie.currentOil = myMairie.currentOil - value[3];
-              localStorage.setItem("myMairie", JSON.stringify(myMairie));
+              toLocalStorage(myMairie);
               OilBar();
-               Reload();
+              Reload();
               return true;
+            }
+            break;
+            default:
+            break;
           }
-        break;
-      default:
-        break;
-      }
-    }
-  }    
-  export default buy;
-  function Reload() {
-  window.location.reload();
-}
+        }
+      }    
+      export default buy;
