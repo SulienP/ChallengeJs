@@ -16,7 +16,6 @@ function OilBar() {
       element = localStorage.getItem("myMairie");
       myMairie = JSON.parse(element);
       setValue((myMairie.currentOil * 100) / myMairie.maxOIlRessource);
-      
     }, 250);
 
   

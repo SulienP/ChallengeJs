@@ -1,4 +1,3 @@
-import Reload from "./reload.js";
 import toLocalStorage from "./toLocalStorage.js";
 function AddRessource() {
   let value = localStorage.getItem("firstDate");
@@ -32,7 +31,7 @@ function AddRessource() {
   if (myMairie.currentOil > myMairie.maxOIlRessource) {
     myMairie.currentOil = myMairie.maxOIlRessource;
   }
-  Reload();
+
   localStorage.setItem("firstDate", JSON.stringify(myDate));
   toLocalStorage(myMairie);
 }

@@ -12,7 +12,6 @@ import { Banch } from "../allInstance/decoration/banch"
 import { Holograme } from "../allInstance/decoration/holograme.js"
 import { Pub } from "../allInstance/decoration/pub.js";
 import test from "../../element/village/test.js"
-import Reload from "./reload.js";
 import toLocalStorage from "./toLocalStorage.js";
 function buy(value) {
   let element = localStorage.getItem('myMairie')
@@ -27,7 +26,7 @@ function buy(value) {
           myMairie.currentMilitaryBat.push(newBat);
             myMairie.currentOil = myMairie.currentOil - value[3];
             toLocalStorage(myMairie);
-          //Reload()
+          //
             test("military");
           return true;
           case "militaryBase":
@@ -36,9 +35,7 @@ function buy(value) {
           myMairie.currentOil = myMairie.currentOil - value[3];
           toLocalStorage(myMairie);
           test("military");
-          
-          //Reload();
-          return true;
+            return true;
           default:
           break;
         }  
@@ -62,7 +59,7 @@ function buy(value) {
             toLocalStorage(myMairie);
             test("storage");
             
-            Reload();
+            ;
             return true;
           }
         }
@@ -77,7 +74,7 @@ function buy(value) {
               myMairie.currentGold = myMairie.currentGold - value[3];
               myMairie.maxOIlRessource = myMairie.maxOIlRessource + myMairie.maxOIlRessource;
               toLocalStorage(myMairie);;
-              Reload();
+              ;
               test("storage");
               
               return true;
@@ -96,7 +93,7 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie)              ;    
-              Reload();
+              ;
               test("defense");
               
               return true;
@@ -110,7 +107,7 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie);
-              Reload();
+              ;
               test("defense");
               
               return true;
@@ -125,7 +122,7 @@ function buy(value) {
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie);  
               test("defense");
-              Reload();
+              ;
               return true;
             }
           }
@@ -144,7 +141,7 @@ function buy(value) {
                   myMairie.currentNumberGOldMining.push(newBat);
                   myMairie.currentOil = myMairie.currentOil - value[3];
                   toLocalStorage(myMairie);
-                  Reload();
+                  ;
                   test("mine");
                   
                   return true;
@@ -159,7 +156,7 @@ function buy(value) {
                   myMairie.currentNumberOilMining.push(newBat);
                   myMairie.currentGold = myMairie.currentGold - value[3];
                   toLocalStorage(myMairie);
-                  Reload();
+                  ;
                   test("mine");
                   return true;
                 }
@@ -174,7 +171,7 @@ function buy(value) {
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie);
               
-              Reload();
+              ;
               test("decoration");
               return true;
             }
@@ -185,7 +182,7 @@ function buy(value) {
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie);
               
-              Reload();
+              ;
               test("decoration");
               return true;
             }    
@@ -196,7 +193,7 @@ function buy(value) {
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie);
               test("decoration");
-              Reload();
+              ;
               return true;
             }
             break;
