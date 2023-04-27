@@ -1,14 +1,27 @@
 import { Progress } from "@mantine/core";
 import "../../../css/barProgress.css";
+import { useEffect, useRef, useState } from "react";
 
 /* 
  ! TODO ajout d'un progression en fonction d'une valeur
 */
 
 function OilBar() {
-   let element = localStorage.getItem("myMairie");
-  const myMairie = JSON.parse(element);
-  let value = (myMairie.currentOil * 100) / myMairie.maxOIlRessource;
+  const [value, setValue] = useState(0);
+  let element = localStorage.getItem("myMairie");
+  let myMairie = JSON.parse(element);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      element = localStorage.getItem("myMairie");
+      myMairie = JSON.parse(element);
+      setValue((myMairie.currentOil * 100) / myMairie.maxOIlRessource);
+      
+    }, 250);
+
+  
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Progress
@@ -24,10 +37,7 @@ function OilBar() {
         width: "20%",
         height: "20px",
       }}
-
     />
-   
-
   );
 }
 

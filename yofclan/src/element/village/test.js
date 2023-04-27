@@ -1,11 +1,23 @@
-function test() {
-    console.log("on passe ici")
+
+function test(batimentType) {
     let canvas = document.querySelector("#myVillage");
     let ctx = canvas.getContext("2d");
-    let village = new Image(400, 400)
-    village.src = "./banch.jpg";
-    village.onload = function () {
-        ctx.drawImage(village, 0, 0, 200, 200);
-    };
+
+    let value = "";
+    switch (batimentType) {
+        case "military":
+        value = '#706FB3'; 
+        break;
+        case "defense":
+        value = '#D35555';
+        break;
+        case "decoration":
+        value = '#B3D355';
+        break;
+        default:
+        break;
+    }
+    ctx.fillStyle = value;
+    ctx.fillRect(0, 10, 10, 10);
 }
 export default test;

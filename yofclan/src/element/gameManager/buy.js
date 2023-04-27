@@ -11,8 +11,6 @@ import { Milice } from "../allInstance/defense/milice.js";
 import { Banch } from "../allInstance/decoration/banch"
 import { Holograme } from "../allInstance/decoration/holograme.js"
 import { Pub } from "../allInstance/decoration/pub.js";
-import GoldBar from "../../element/village/menu/orBar.js"
-import OilBar from "../../element/village/menu/oilBar.js"
 import test from "../../element/village/test.js"
 import Reload from "./reload.js";
 import toLocalStorage from "./toLocalStorage.js";
@@ -27,19 +25,19 @@ function buy(value) {
           case "zehi":     
           newBat = new Zehi();
           myMairie.currentMilitaryBat.push(newBat);
-          myMairie.currentOil = myMairie.currentOil - value[3];
-          toLocalStorage(myMairie);
-            OilBar()
-            test();
-            //Reload();
+            myMairie.currentOil = myMairie.currentOil - value[3];
+            toLocalStorage(myMairie);
+          //Reload()
+            test("military");
           return true;
           case "militaryBase":
           newBat = new Camps();  
           myMairie.currentMilitaryBat.push(newBat);
           myMairie.currentOil = myMairie.currentOil - value[3];
           toLocalStorage(myMairie);
-          OilBar();
-          Reload();
+          test("military");
+          
+          //Reload();
           return true;
           default:
           break;
@@ -60,8 +58,10 @@ function buy(value) {
             newBat = new GOLDStorage();
             myMairie.currentNumberGOldStorage.push(newBat);
             myMairie.currentOil = myMairie.currentOil - value[3];
+            myMairie.maxGoldRessource =myMairie.maxGoldRessource + myMairie.maxGoldRessource;
             toLocalStorage(myMairie);
-            OilBar();
+            test("storage");
+            
             Reload();
             return true;
           }
@@ -75,9 +75,11 @@ function buy(value) {
               newBat = new OilSTORAGE();
               myMairie.currentNumberOilStorage.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
+              myMairie.maxOIlRessource = myMairie.maxOIlRessource + myMairie.maxOIlRessource;
               toLocalStorage(myMairie);;
-              GoldBar();
               Reload();
+              test("storage");
+              
               return true;
             }
           }
@@ -94,8 +96,9 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie)              ;    
-              GoldBar();
               Reload();
+              test("defense");
+              
               return true;
             }
           }
@@ -107,8 +110,9 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie);
-              GoldBar();
               Reload();
+              test("defense");
+              
               return true;
             }
           }
@@ -120,7 +124,7 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie);  
-              GoldBar();
+              test("defense");
               Reload();
               return true;
             }
@@ -140,8 +144,9 @@ function buy(value) {
                   myMairie.currentNumberGOldMining.push(newBat);
                   myMairie.currentOil = myMairie.currentOil - value[3];
                   toLocalStorage(myMairie);
-                  OilBar();
                   Reload();
+                  test("mine");
+                  
                   return true;
                 }
               }
@@ -150,13 +155,12 @@ function buy(value) {
             if (value[4] === "oilMine") {
               if (myMairie.currentGold > value[3]) {
                 if (myMairie.currentNumberOilMining.length < myMairie.maxOilMining) {
-                  
                   newBat = new OILMINE();
                   myMairie.currentNumberOilMining.push(newBat);
                   myMairie.currentGold = myMairie.currentGold - value[3];
                   toLocalStorage(myMairie);
-                  OilBar();
                   Reload();
+                  test("mine");
                   return true;
                 }
               }
@@ -169,8 +173,9 @@ function buy(value) {
               newBat = new Holograme();
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie);
-              OilBar();
+              
               Reload();
+              test("decoration");
               return true;
             }
             break;
@@ -179,8 +184,9 @@ function buy(value) {
               newBat = new Banch();
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie);
-              OilBar();
+              
               Reload();
+              test("decoration");
               return true;
             }    
             break;
@@ -189,7 +195,7 @@ function buy(value) {
               newBat = new Pub();
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie);
-              OilBar();
+              test("decoration");
               Reload();
               return true;
             }
