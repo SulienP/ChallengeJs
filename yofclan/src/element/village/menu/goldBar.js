@@ -1,6 +1,6 @@
 import { Progress } from "@mantine/core";
 import "../../../css/barProgress.css"
-import { useEffect, useRef, useState } from "react";
+import { useEffect,  useState } from "react";
 
 /* 
  ! TODO ajout d'un progression en fonction de ce qu'on a + variable
@@ -9,7 +9,6 @@ function GoldBar() {
   const [value, setValue] = useState(0);
   let element = localStorage.getItem("myMairie");
   let myMairie = JSON.parse(element);
-  //setValue((myMairie.currentOil * 100) / myMairie.maxOIlRessource);
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -31,8 +31,7 @@ function AddRessource() {
   if (myMairie.currentOil > myMairie.maxOIlRessource) {
     myMairie.currentOil = myMairie.maxOIlRessource;
   }
-
-  localStorage.setItem("firstDate", JSON.stringify(myDate));
-  toLocalStorage(myMairie);
+  toLocalStorage(myDate,"firstDate");
+  toLocalStorage(myMairie, "myMairie");
 }
 export default AddRessource;

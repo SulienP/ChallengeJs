@@ -12,6 +12,7 @@ export class Pub extends Batiment {
       finalId,
       0,
       30,
+      0,
       "nothing",
       0,
       0,

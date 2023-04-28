@@ -11,7 +11,7 @@ import { Milice } from "../allInstance/defense/milice.js";
 import { Banch } from "../allInstance/decoration/banch"
 import { Holograme } from "../allInstance/decoration/holograme.js"
 import { Pub } from "../allInstance/decoration/pub.js";
-import test from "../../element/village/test.js"
+import draw from "../village/draw.js"
 import toLocalStorage from "./toLocalStorage.js";
 function buy(value) {
   let element = localStorage.getItem('myMairie')
@@ -27,14 +27,14 @@ function buy(value) {
             myMairie.currentOil = myMairie.currentOil - value[3];
             toLocalStorage(myMairie);
           //
-            test("military");
+            draw("zehi");
           return true;
           case "militaryBase":
           newBat = new Camps();  
           myMairie.currentMilitaryBat.push(newBat);
           myMairie.currentOil = myMairie.currentOil - value[3];
           toLocalStorage(myMairie);
-          test("military");
+          draw("militaryBase");
             return true;
           default:
           break;
@@ -57,7 +57,7 @@ function buy(value) {
             myMairie.currentOil = myMairie.currentOil - value[3];
             myMairie.maxGoldRessource =myMairie.maxGoldRessource + myMairie.maxGoldRessource;
             toLocalStorage(myMairie);
-            test("storage");
+            draw("goldStorage");
             
             ;
             return true;
@@ -75,7 +75,7 @@ function buy(value) {
               myMairie.maxOIlRessource = myMairie.maxOIlRessource + myMairie.maxOIlRessource;
               toLocalStorage(myMairie);;
               ;
-              test("storage");
+              draw("oilStorage");
               
               return true;
             }
@@ -94,7 +94,7 @@ function buy(value) {
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie)              ;    
               ;
-              test("defense");
+              draw("milice");
               
               return true;
             }
@@ -108,7 +108,7 @@ function buy(value) {
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie);
               ;
-              test("defense");
+              draw("cannon");
               
               return true;
             }
@@ -121,7 +121,7 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie);  
-              test("defense");
+              draw("laser");
               ;
               return true;
             }
@@ -132,7 +132,7 @@ function buy(value) {
         }
       } else if (value[1] === "mining") {
         if (value[2] === "oil") {
-          if (value[4] === "goldMine") {
+          if (value[4] === "") {
             if (myMairie.currentOil > value[3]) {
               if (
                 myMairie.currentNumberGOldMining.length < myMairie.maxGOldMining
@@ -142,7 +142,7 @@ function buy(value) {
                   myMairie.currentOil = myMairie.currentOil - value[3];
                   toLocalStorage(myMairie);
                   ;
-                  test("mine");
+                  draw("goldMine");
                   
                   return true;
                 }
@@ -157,7 +157,7 @@ function buy(value) {
                   myMairie.currentGold = myMairie.currentGold - value[3];
                   toLocalStorage(myMairie);
                   ;
-                  test("mine");
+                  draw("oilMine");
                   return true;
                 }
               }
@@ -172,7 +172,7 @@ function buy(value) {
               toLocalStorage(myMairie);
               
               ;
-              test("decoration");
+              draw("hologram");
               return true;
             }
             break;
@@ -183,7 +183,7 @@ function buy(value) {
               toLocalStorage(myMairie);
               
               ;
-              test("decoration");
+              draw("banch");
               return true;
             }    
             break;
@@ -192,7 +192,7 @@ function buy(value) {
               newBat = new Pub();
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie);
-              test("decoration");
+              draw("pub");
               ;
               return true;
             }

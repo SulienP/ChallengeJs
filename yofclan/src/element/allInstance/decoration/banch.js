@@ -11,6 +11,7 @@ export class Banch extends Batiment {
       "decoration",
       finalId,
       0,
+      0,
       30,
       "nothing",
       0,

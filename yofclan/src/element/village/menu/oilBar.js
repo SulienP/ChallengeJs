@@ -1,6 +1,6 @@
 import { Progress } from "@mantine/core";
 import "../../../css/barProgress.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 /* 
  ! TODO ajout d'un progression en fonction d'une valeur
@@ -21,7 +21,6 @@ function OilBar() {
   
     return () => clearInterval(interval);
   }, []);
-
   return (
     <Progress
       color="indigo"

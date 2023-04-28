@@ -10,5 +10,5 @@ function Village() {
       ></canvas>
 
   );
-}
+} 
 export default Village;
