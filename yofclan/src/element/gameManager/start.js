@@ -5,15 +5,13 @@ import { GoldMine } from "../allInstance/mining/gold.js";
 import { OILMINE } from "../allInstance/mining/oil.js";
 import { BatimentPostionExtended } from "../allInstance/batimentPosition.js";
 import toLocalStorage from "./toLocalStorage.js";
+import draw from "../village/draw.js";
 
 
-/*
-    TODO: Gestion des instances, récupération des id
-    TODO: Sauvegarde du jeu
-    
-*/
+
 
 function StartGame() {
+
   let myMairie = new MAIRIE();
   let GoldStorage = new GOLDStorage();
   let oilStorage = new OilSTORAGE();
@@ -28,7 +26,7 @@ function StartGame() {
   myMairie.maxGoldRessource = GoldStorage.maxStorage;
   myMairie.maxOIlRessource = oilStorage.maxStorage;
   const firstDate = Date.now()
-  toLocalStorage(batiment, "batimentStructure");
+  toLocalStorage(batiment, "batimentArray");
   toLocalStorage(firstDate, "firstDate");
   toLocalStorage(myMairie, "myMairie");
 }

@@ -6,8 +6,8 @@ function toLocalStorage(element, type) {
       case "firstDate":
         localStorage.setItem("firstDate", JSON.stringify(element));
         break;
-      case "batimentStructure":
-        localStorage.setItem("batimentStructure", JSON.stringify(element));
+      case "batimentArray":
+        localStorage.setItem("batimentArray", JSON.stringify(element));
         break;
       default:
         break;

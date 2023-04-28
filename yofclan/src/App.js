@@ -12,8 +12,6 @@ function App() {
   
   return (
     <>
-      <GameManager></GameManager>
-
       <div class="Gold">
         <GoldBar></GoldBar>
       </div>
@@ -29,7 +27,6 @@ function App() {
       <div class="Shop">
         <Shop></Shop>
       </div>
-
       <div class="AddButtonRessource">
         <AddButtonRessource></AddButtonRessource>
       </div>

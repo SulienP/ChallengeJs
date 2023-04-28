@@ -25,7 +25,7 @@ function buy(value) {
           newBat = new Zehi();
           myMairie.currentMilitaryBat.push(newBat);
             myMairie.currentOil = myMairie.currentOil - value[3];
-            toLocalStorage(myMairie);
+            toLocalStorage(myMairie, "myMairie");
           //
             draw("zehi");
           return true;
@@ -33,7 +33,7 @@ function buy(value) {
           newBat = new Camps();  
           myMairie.currentMilitaryBat.push(newBat);
           myMairie.currentOil = myMairie.currentOil - value[3];
-          toLocalStorage(myMairie);
+          toLocalStorage(myMairie, "myMairie");
           draw("militaryBase");
             return true;
           default:
@@ -56,7 +56,7 @@ function buy(value) {
             myMairie.currentNumberGOldStorage.push(newBat);
             myMairie.currentOil = myMairie.currentOil - value[3];
             myMairie.maxGoldRessource =myMairie.maxGoldRessource + myMairie.maxGoldRessource;
-            toLocalStorage(myMairie);
+            toLocalStorage(myMairie, "myMairie");
             draw("goldStorage");
             
             ;
@@ -73,7 +73,7 @@ function buy(value) {
               myMairie.currentNumberOilStorage.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               myMairie.maxOIlRessource = myMairie.maxOIlRessource + myMairie.maxOIlRessource;
-              toLocalStorage(myMairie);;
+              toLocalStorage(myMairie, "myMairie");;
               ;
               draw("oilStorage");
               
@@ -106,7 +106,7 @@ function buy(value) {
               newBat = new Cannon();
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
-              toLocalStorage(myMairie);
+              toLocalStorage(myMairie, "myMairie");
               ;
               draw("cannon");
               
@@ -120,7 +120,7 @@ function buy(value) {
               newBat = new Laser();
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
-              toLocalStorage(myMairie);  
+              toLocalStorage(myMairie, "myMairie");  
               draw("laser");
               ;
               return true;
@@ -140,7 +140,7 @@ function buy(value) {
                   newBat = new GoldMine();
                   myMairie.currentNumberGOldMining.push(newBat);
                   myMairie.currentOil = myMairie.currentOil - value[3];
-                  toLocalStorage(myMairie);
+                  toLocalStorage(myMairie, "myMairie");
                   ;
                   draw("goldMine");
                   
@@ -155,7 +155,7 @@ function buy(value) {
                   newBat = new OILMINE();
                   myMairie.currentNumberOilMining.push(newBat);
                   myMairie.currentGold = myMairie.currentGold - value[3];
-                  toLocalStorage(myMairie);
+                  toLocalStorage(myMairie, "myMairie");
                   ;
                   draw("oilMine");
                   return true;
@@ -169,7 +169,7 @@ function buy(value) {
             if (myMairie.currentOil > value[3]) {
               newBat = new Holograme();
               myMairie.currentOil = myMairie.currentOil - value[3];
-              toLocalStorage(myMairie);
+              toLocalStorage(myMairie, "myMairie");
               
               ;
               draw("hologram");
@@ -180,7 +180,7 @@ function buy(value) {
             if(myMairie.currentOil > value[3]) {
               newBat = new Banch();
               myMairie.currentOil = myMairie.currentOil - value[3];
-              toLocalStorage(myMairie);
+              toLocalStorage(myMairie, "myMairie");
               
               ;
               draw("banch");
@@ -191,7 +191,7 @@ function buy(value) {
             if (myMairie.currentOil > value[3]) {
               newBat = new Pub();
               myMairie.currentOil = myMairie.currentOil - value[3];
-              toLocalStorage(myMairie);
+              toLocalStorage(myMairie, "myMairie");
               draw("pub");
               ;
               return true;
