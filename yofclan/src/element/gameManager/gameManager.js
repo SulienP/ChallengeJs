@@ -11,13 +11,7 @@ function GameManager(value) {
     GameManager(["loadVillage"])
   } else {
     if (value !== undefined) {
-      if (value[0] === "loadVillage") {
-        // draw("mairie");
-        // draw("goldStorage");
-        // draw("oilStorage");
-        // draw("goldMine");
-        // draw("oilMine");
-      } else if (value[0] === "buy") {
+     if (value[0] === "buy") {
         buy(value);
       } else if (value[0] === "upgrade") {
         upgrade(value);

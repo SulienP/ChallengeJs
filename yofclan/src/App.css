@@ -66,3 +66,17 @@
   right: 5%;
   bottom: 5%;
 }
+
+.Generate{
+  position: absolute;
+  top:0;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.HelpButton{
+  position: absolute;
+  bottom: 0;
+  margin-left: 50%;
+  margin-right: 50%;
+}

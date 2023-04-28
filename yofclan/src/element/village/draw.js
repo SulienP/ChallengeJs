@@ -4,11 +4,7 @@ let axeX = 0;
 let axeY = 0;
 let size1 = 5;
 let size2 = 5;
-// draw("mairie");
-// draw("goldStorage");
-// draw("oilStorage");
-// draw("goldMine");
-// draw("oilMine");
+
 function draw(batimentType) {
 
     let canvas = document.querySelector("#myVillage");    
@@ -74,9 +70,10 @@ function draw(batimentType) {
     ctx.fillStyle = batiment.array[i].color;
     ctx.fillRect(batiment.array[i].xAxes, batiment.array[i].yAxes, batiment.array[i].size1, batiment.array[i].size2);
     axeX += 10;
-    if (axeX > 60) {
-        axeY += 10;
-        axeX = 0
+    let maxWidth = canvas.wdith
+    if (axeX > maxWidth) {
+      axeY += 10;
+      axeX = 0;
     }
 }
 export default draw;

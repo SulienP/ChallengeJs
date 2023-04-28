@@ -7,16 +7,24 @@ import GoldBar from "../src/element/village/menu/goldBar.js";
 import GameManager from "../src/element/gameManager/gameManager.js";
 import Attaque from "../src/element/village/menu/attaque.js";
 import AddButtonRessource from "../src/element/village/menu/addButtonRessouce.js";
+import GenrateVillage from './element/village/menu/generateVillage';
+import HelpButton from './element/village/menu/helpButton';
 import "../src/css/AddButtonRessource.css";
 function App() {
   
   return (
     <>
+      <div class="Generate">
+        <GenrateVillage></GenrateVillage>
+      </div>
       <div class="Gold">
         <GoldBar></GoldBar>
       </div>
       <div class="Oil">
         <OilBar></OilBar>
+      </div>
+      <div class="HelpButton">
+        <HelpButton></HelpButton>
       </div>
       <div class="Attaque">
         <Attaque></Attaque>
