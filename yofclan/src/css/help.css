@@ -1,12 +1,14 @@
 .help{
-        position: absolute;
-        bottom: 0%;
-        margin-bottom: 100%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
-        width: 18rem;
-        height: 14rem;
-        background-color: rgb(252, 244, 244);
-        border-radius: 10px;
-        text-decoration: none;
-    }
+    
+    z-index: 9999;
+    background-color: red;
+}
+ /* display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ z-index: 9999;
+ background-color: red;
+ margin-top: 10px;
+ margin-left: 10px;
+ margin-right: 10px; */

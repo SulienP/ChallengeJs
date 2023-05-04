@@ -10,9 +10,21 @@ function HelpButton() {
     return (
       <>
         <Button onClick={displayHelp}>Help</Button>
-        <div class="help" style={{ display: helpDisplay ? "block" : "none", zIndex: 9999 }}>
+        <div
+          class="help"
+          style={{ display: helpDisplay ? "block" : "none"}}
+        >
+          <CloseButton
+            title="Close popover"
+            size="xl"
+            iconSize={20}
+            onClick={displayHelp}
+            style={{
+              position: "absolute",
+              right: "0",
+            }}
+          />
           Ici sera afficher l'aide
-          <CloseButton title="Close popover" size="xl" iconSize={20} onClick={displayHelp} />
         </div>
       </>
     );

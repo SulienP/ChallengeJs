@@ -5,10 +5,8 @@ import "../../css/index.css";
 */
 function Village() {
   return (
-      <canvas
-        id="myVillage"
-      ></canvas>
-
+    <canvas id="myVillage"></canvas>
   );
+  
 } 
 export default Village;
