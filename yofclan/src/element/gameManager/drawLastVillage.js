@@ -11,7 +11,8 @@ function drawLastVillage() {
       draw("goldMine");
       draw("oilMine");
     } else {
-    let canvas = document.querySelector("#myVillage");
+      let canvas = document.querySelector("#myVillage");
+        canvas.addEventListener("click",function () {console.log("cliqué après génération du village");},false);
         let ctx = canvas.getContext("2d");
         for (let i = 0; i < size; i++){
              ctx.fillStyle = batimentArray.array[i].color;

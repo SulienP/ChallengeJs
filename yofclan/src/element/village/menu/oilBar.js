@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Progress } from "@mantine/core";
 import "../../../css/barProgress.css";
 import { useEffect, useState } from "react";
@@ -16,7 +17,7 @@ function OilBar() {
       element = localStorage.getItem("myMairie");
       myMairie = JSON.parse(element);
       setValue((myMairie.currentOil * 100) / myMairie.maxOIlRessource);
-    }, 250);
+    }, 100);
 
   
     return () => clearInterval(interval);

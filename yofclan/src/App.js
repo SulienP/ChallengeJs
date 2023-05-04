@@ -11,7 +11,7 @@ import GenrateVillage from './element/village/menu/generateVillage';
 import HelpButton from './element/village/menu/helpButton';
 import "../src/css/AddButtonRessource.css";
 function App() {
-  
+    let canvas = document.querySelector("#myVillage");
   return (
     <>
       <div class="Generate">
