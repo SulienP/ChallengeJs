@@ -7,14 +7,17 @@ let size2 = 15;
 
 function draw(batimentType) {
     let canvas = document.querySelector("#myVillage");
-    canvas.addEventListener( "click",function () {console.log("cliqué");}, false);
+    canvas.addEventListener("click", function (event) {
+           console.log(canvas.getImageData(event.offsetX, event.offsetY));
+
+}, false);
     let ctx = canvas.getContext("2d");
     let color = "";
     let myBat = "";
     switch (batimentType) {
     case "mairie":
       size1 = 20;
-      size2 = 25;
+      size2 = 20;
       color = "#FF9700";
       axeX += 0;
       axeY += 0;
@@ -83,7 +86,7 @@ function draw(batimentType) {
     if (batimentType === "mairie") {
         size1 = 15;
         size2 = 15;
-        axeX += 10;
+        axeX += 15;
     }
   let maxWidth = canvas.wdith;
   if (axeX > maxWidth) {

@@ -12,8 +12,16 @@ function drawLastVillage() {
       draw("oilMine");
     } else {
       let canvas = document.querySelector("#myVillage");
-        canvas.addEventListener("click",function () {console.log("cliqué après génération du village");},false);
-        let ctx = canvas.getContext("2d");
+      var ctx = canvas.getContext("2d");
+
+    canvas.addEventListener("click",function (event) {
+      
+
+      let test = ctx.getImageData(event.offsetX, event.offsetY, 1, 1);
+        var couleurHex ="#" +((1 << 24) +(test.data[0] << 16) +(test.data[1] << 8) +test.data[2]).toString(16).slice(1);
+            console.log(couleurHex);
+      }, false);
+       ctx = canvas.getContext("2d");
         for (let i = 0; i < size; i++){
              ctx.fillStyle = batimentArray.array[i].color;
              ctx.fillRect(
