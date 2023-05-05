@@ -24,10 +24,9 @@ function buy(value) {
           case "zehi":     
           newBat = new Zehi();
           myMairie.currentMilitaryBat.push(newBat);
-            myMairie.currentOil = myMairie.currentOil - value[3];
-            toLocalStorage(myMairie, "myMairie");
-          //
-            draw("zehi");
+          myMairie.currentOil = myMairie.currentOil - value[3];
+          toLocalStorage(myMairie, "myMairie");
+          draw("zehi");
           return true;
           case "militaryBase":
           newBat = new Camps();  
@@ -35,35 +34,35 @@ function buy(value) {
           myMairie.currentOil = myMairie.currentOil - value[3];
           toLocalStorage(myMairie, "myMairie");
           draw("militaryBase");
-            return true;
+          return true;
           default:
           break;
         }  
+      } else {
+        return ["maxBatiment", "military", value[3], value[2]];
       }
     } else {
-      return false
+      return ["noEnouthRessource", "military", value[3], value[2]];
     }
     
   } else if (value[1] === "ressource") {
     switch (value[4]) {
       case "goldStorage":
       if (myMairie.currentOil > value[3]) {
-        if (
-          myMairie.currentNumberGOldStorage.length <
-          myMairie.maxGOldStorage
-          ) {          
+        if (myMairie.currentNumberGOldStorage.length <myMairie.maxGOldStorage ) {          
             newBat = new GOLDStorage();
             myMairie.currentNumberGOldStorage.push(newBat);
             myMairie.currentOil = myMairie.currentOil - value[3];
             myMairie.maxGoldRessource =myMairie.maxGoldRessource + myMairie.maxGoldRessource;
             toLocalStorage(myMairie, "myMairie");
             draw("goldStorage");
-            
-            ;
             return true;
+          } else {
+          return ["maxBatiment", "Goldstorage", value[3], value[2]];
           }
+        } else {
+         return ["noEnouthRessource", "Goldstorage", value[3], value[2]];
         }
-        break;
         case "oilStorage":
         if (myMairie.currentGold > value[3]) {
           if (
@@ -74,13 +73,14 @@ function buy(value) {
               myMairie.currentGold = myMairie.currentGold - value[3];
               myMairie.maxOIlRessource = myMairie.maxOIlRessource + myMairie.maxOIlRessource;
               toLocalStorage(myMairie, "myMairie");;
-              ;
-              draw("oilStorage");
-              
+              draw("oilStorage"); 
               return true;
+            } else {
+             return ["maxBatiment", "Oilstorage", value[3], value[2]]; 
             }
+          } else {
+         return ["noEnouthRessource", "Oilstorage", value[3], value[2]];
           }
-          break;
           default:
           break;
         }
@@ -93,13 +93,14 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie)              ;    
-              ;
               draw("milice");
-              
               return true;
+            } else {
+              return ["maxBatiment", "defense", value[3], value[2]]; 
             }
+          } else {
+         return ["noEnouthRessource", "defense", value[3], value[2]];
           }
-          break;
           case "cannon":
           if (myMairie.currentGold > value[3]) {
             if (myMairie.currentNumberDefense.length < myMairie.maxDefense) {
@@ -107,13 +108,14 @@ function buy(value) {
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie, "myMairie");
-              ;
               draw("cannon");
-              
               return true;
+            } else {
+              return ["maxBatiment", "defense", value[3], value[2]];  
             }
+          } else {
+            return ["noEnouthRessource", "defense", value[3], value[2]];
           }
-          break;
           case "laser":
           if (myMairie.currentGold > value[3]) {
             if (myMairie.currentNumberDefense.length < myMairie.maxDefense) {
@@ -124,15 +126,18 @@ function buy(value) {
               draw("laser");
               ;
               return true;
+            } else {
+              return ["maxBatiment", "defense", value[3], value[2]]; 
             }
+          } else {
+            return ["noEnouthRessource", "defense", value[3], value[2]];
           }
-          break;
           default:
           break;
         }
       } else if (value[1] === "mining") {
         if (value[2] === "oil") {
-          if (value[4] === "") {
+          if (value[4] === "goldMine") {
             if (myMairie.currentOil > value[3]) {
               if (
                 myMairie.currentNumberGOldMining.length < myMairie.maxGOldMining
@@ -141,11 +146,13 @@ function buy(value) {
                   myMairie.currentNumberGOldMining.push(newBat);
                   myMairie.currentOil = myMairie.currentOil - value[3];
                   toLocalStorage(myMairie, "myMairie");
-                  ;
                   draw("goldMine");
-                  
                   return true;
+                } else {
+                   return ["maxBatiment", "Goldmine", value[3], value[2]];
                 }
+              } else {
+                return ["noEnouthRessource", "Goldmine", value[3], value[2]];
               }
             }
           } else if (value[2] === "or") {
@@ -156,10 +163,13 @@ function buy(value) {
                   myMairie.currentNumberOilMining.push(newBat);
                   myMairie.currentGold = myMairie.currentGold - value[3];
                   toLocalStorage(myMairie, "myMairie");
-                  ;
                   draw("oilMine");
                   return true;
+                } else {
+                  return ["maxBatiment", "Oilmine", value[3], value[2]];
                 }
+              }else{
+                return ["noEnouthRessource", "Oilmine", value[3], value[2]];
               }
             }
           }
@@ -170,36 +180,34 @@ function buy(value) {
               newBat = new Holograme();
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie, "myMairie");
-              
-              ;
               draw("hologram");
               return true;
+            }  else {
+              return ["noEnouthRessource", "decoration", value[3], value[2]];
             }
-            break;
             case "banch":
             if(myMairie.currentOil > value[3]) {
               newBat = new Banch();
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie, "myMairie");
-              
-              ;
               draw("banch");
               return true;
-            }    
-            break;
+            }  else {
+              return ["noEnouthRessource", "decoration", value[3], value[2]];
+            }
             case "pub ":
             if (myMairie.currentOil > value[3]) {
               newBat = new Pub();
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie, "myMairie");
               draw("pub");
-              ;
               return true;
+            }  else {
+              return ["noEnouthRessource", "decoration", value[3], value[2]];
             }
-            break;
             default:
-            break;
-          }
-        }
-      }    
-      export default buy;
+        break;
+      }
+    }
+  }    
+export default buy;

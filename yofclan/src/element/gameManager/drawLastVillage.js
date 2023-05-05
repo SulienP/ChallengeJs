@@ -1,6 +1,8 @@
 import draw from "../village/draw";
 
 function drawLastVillage() {
+    const canvas = document.querySelector("#myVillage");
+    const ctx = canvas.getContext("2d");
     let value = localStorage.getItem("batimentArray");
     let batimentArray = JSON.parse(value);
     let size = batimentArray.array.length;
@@ -11,17 +13,18 @@ function drawLastVillage() {
       draw("goldMine");
       draw("oilMine");
     } else {
-      let canvas = document.querySelector("#myVillage");
-      var ctx = canvas.getContext("2d");
+      canvas.addEventListener("click",function (event) {
+    const x = event.clientX - canvas.offsetLeft;
+    const y = event.clientY - canvas.offsetTop;
+        const imageData = ctx.getImageData(x, y, 10, 10);
+        console.log(imageData);
+        console.log(x,y ,"x/y")
+        const pixelData = imageData.data;
+          console.log(
+            `Rouge : ${pixelData[0]}, Vert : ${pixelData[1]}, Bleu : ${pixelData[2]}, Alpha : ${pixelData[3]}`
+          );
 
-    canvas.addEventListener("click",function (event) {
-      
-
-      let test = ctx.getImageData(event.offsetX, event.offsetY, 1, 1);
-        var couleurHex ="#" +((1 << 24) +(test.data[0] << 16) +(test.data[1] << 8) +test.data[2]).toString(16).slice(1);
-            console.log(couleurHex);
       }, false);
-       ctx = canvas.getContext("2d");
         for (let i = 0; i < size; i++){
              ctx.fillStyle = batimentArray.array[i].color;
              ctx.fillRect(

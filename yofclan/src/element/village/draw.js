@@ -9,7 +9,6 @@ function draw(batimentType) {
     let canvas = document.querySelector("#myVillage");
     canvas.addEventListener("click", function (event) {
            console.log(canvas.getImageData(event.offsetX, event.offsetY));
-
 }, false);
     let ctx = canvas.getContext("2d");
     let color = "";
@@ -19,8 +18,8 @@ function draw(batimentType) {
       size1 = 20;
       size2 = 20;
       color = "#FF9700";
-      axeX += 0;
-      axeY += 0;
+      axeX = 0;
+      axeY = 0;
       break;
     case "zehi":
       color = "#2C29FF";
