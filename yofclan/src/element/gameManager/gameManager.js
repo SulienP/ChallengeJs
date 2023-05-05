@@ -11,10 +11,9 @@ function GameManager(value) {
     GameManager(["loadVillage"])
   } else {
     if (value !== undefined) {
-     if (value[0] === "buy") {
-       const error = buy(value);
+      if (value[0] === "buy") {
+        const error = buy(value);
        if (error.length > 0) {
-        console.log(error);
          ErrorWindos(error);
        }
       } else if (value[0] === "upgrade") {

@@ -8,7 +8,7 @@ let size2 = 15;
 function draw(batimentType) {
     let canvas = document.querySelector("#myVillage");
     canvas.addEventListener("click", function (event) {
-           console.log(canvas.getImageData(event.offsetX, event.offsetY));
+          //  console.log(canvas.getImageData(event.offsetX, event.offsetY));
 }, false);
     let ctx = canvas.getContext("2d");
     let color = "";
@@ -80,15 +80,13 @@ function draw(batimentType) {
     let i = batiment.array.length - 1;
     ctx.fillStyle = batiment.array[i].color;
     ctx.fillRect(batiment.array[i].xAxes, batiment.array[i].yAxes, batiment.array[i].size1, batiment.array[i].size2);
-    
     axeX += 18;
     if (batimentType === "mairie") {
         size1 = 15;
         size2 = 15;
         axeX += 15;
-    }
-  let maxWidth = canvas.wdith;
-  if (axeX > maxWidth) {
+  }
+  if (i >= 16) {
     axeY += 15;
     axeX = 0;
   }
