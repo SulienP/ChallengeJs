@@ -124,7 +124,6 @@ function buy(value) {
               myMairie.currentGold = myMairie.currentGold - value[3];
               toLocalStorage(myMairie, "myMairie");  
               draw("laser");
-              ;
               return true;
             } else {
               return ["maxBatiment", "defense", value[3], value[2]]; 
@@ -196,15 +195,16 @@ function buy(value) {
               return ["noEnouthRessource", "decoration", value[3], value[2]];
             }
             case "pub ":
-            if (myMairie.currentOil > value[3]) {
-              newBat = new Pub();
-              myMairie.currentOil = myMairie.currentOil - value[3];
-              toLocalStorage(myMairie, "myMairie");
-              draw("pub");
-              return true;
-            }  else {
-              return ["noEnouthRessource", "decoration", value[3], value[2]];
-            }
+              if (myMairie.currentOil > value[3]) {
+                newBat = new Pub();
+                myMairie.currentOil = myMairie.currentOil - value[3];
+                toLocalStorage(myMairie, "myMairie");
+                draw("pub");
+                return true;
+                // } else {
+                //   return ["noEnouthRessource", "decoration", value[3], value[2]];
+              }
+              break;
             default:
         break;
       }
