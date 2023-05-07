@@ -5,19 +5,20 @@ import { GoldMine } from "../allInstance/mining/gold.js";
 import { OILMINE } from "../allInstance/mining/oil.js";
 import { BatimentPostionExtended } from "../allInstance/batimentPosition.js";
 import toLocalStorage from "./toLocalStorage.js";
-import draw from "../village/draw.js";
 
 
 
 
 function StartGame() {
-
+    
+  let axeY = 0;
+  let limite = 15
   let myMairie = new MAIRIE();
-  let GoldStorage = new GOLDStorage();
-  let oilStorage = new OilSTORAGE();
-  let goldMine = new GoldMine();
-  let oilMine = new OILMINE();
-  let batiment = new BatimentPostionExtended();
+  const GoldStorage = new GOLDStorage();
+  const oilStorage = new OilSTORAGE();
+  const goldMine = new GoldMine();
+  const oilMine = new OILMINE();
+  const batiment = new BatimentPostionExtended();
   myMairie.currentNumber++;
   myMairie.currentNumberGOldMining.push(goldMine);
   myMairie.currentNumberOilMining.push(oilMine);
@@ -29,5 +30,7 @@ function StartGame() {
   toLocalStorage(batiment, "batimentArray");
   toLocalStorage(firstDate, "firstDate");
   toLocalStorage(myMairie, "myMairie");
+  toLocalStorage(axeY, "axeY");
+  toLocalStorage(limite, "limite");
 }
 export default StartGame;

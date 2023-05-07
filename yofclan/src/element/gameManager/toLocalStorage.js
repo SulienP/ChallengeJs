@@ -9,6 +9,12 @@ function toLocalStorage(element, type) {
       case "batimentArray":
         localStorage.setItem("batimentArray", JSON.stringify(element));
         break;
+      case "axeY":
+        localStorage.setItem("axeY", JSON.stringify(element));
+        break;
+      case "limite":
+        localStorage.setItem("limite", JSON.stringify(element));
+        break;
       default:
         break;
     }

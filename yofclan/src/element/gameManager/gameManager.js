@@ -13,12 +13,9 @@ function GameManager(value) {
     if (value !== undefined) {
       if (value[0] === "buy") {
         const error = buy(value);
-        if (error === undefined) {
-          ErrorWindos(error);
-        } else {
+        if (error)
           if (error.length > 0) {
-            ErrorWindos(error);
-          }
+            ErrorWindos(error);       
         }
       } else if (value[0] === "upgrade") {
         upgrade(value);

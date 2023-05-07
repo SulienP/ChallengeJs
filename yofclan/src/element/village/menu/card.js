@@ -211,13 +211,13 @@ function Card() {
           <div id="content" style={{ display: decorationState ? "block" : "none" }}>
             <div className="all">
               <Button.Group orientation="vertical"onClick={() => {inverseDisplay("decoration")}}>
-                <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 150, "hologram"])}>
+                <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 0, "hologram"])}>
                   Hologram 150 Oil
                 </Button>
-                <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 150, "banch"])}>
+                <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 0, "banch"])}>
                   Banch 150 Oil
                 </Button>
-                <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 150, "pub"])}>
+                <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 0, "pub"])}>
                   Pub 150 Oil
                 </Button>
               </Button.Group>

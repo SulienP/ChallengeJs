@@ -1,25 +1,25 @@
 import { ValuePositionBatiment } from "../allInstance/ValuePositionBatiment.js";
 import toLocalStorage from "../gameManager/toLocalStorage.js";
 let axeX = 0;
-let axeY = 0;
 let size1 = 15;
 let size2 = 15;
-
 function draw(batimentType) {
+  let axeY = JSON.parse(localStorage.getItem("axeY"));
+  let limite = JSON.parse(localStorage.getItem("limite"));
+  console.log(axeY , limite)
     let canvas = document.querySelector("#myVillage");
     canvas.addEventListener("click", function (event) {
-          //  console.log(canvas.getImageData(event.offsetX, event.offsetY));
-}, false);
+      const rect = canvas.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+        console.log(`Coordonnées du carré cliqué : (${x}, ${y})`);
+    }, false);
     let ctx = canvas.getContext("2d");
     let color = "";
     let myBat = "";
     switch (batimentType) {
-    case "mairie":
-      size1 = 20;
-      size2 = 20;
+    case "mairie": 
       color = "#FF9700";
-      axeX = 0;
-      axeY = 0;
       break;
     case "zehi":
       color = "#2C29FF";
@@ -63,15 +63,21 @@ function draw(batimentType) {
     let value = localStorage.getItem("batimentArray");
     let batimentArray = JSON.parse(value);
     if (batimentArray !== undefined) {
-        for (let i = 0; i < batimentArray.array.length; i++) {
-            axeX = batimentArray.array[i].xAxes + 18
-            if (axeY <= canvas.wdith) {
-                axeY = batimentArray[i].yAxes + 18
-            } else {
-                axeY = 0
-            }
+        for (const element of batimentArray.array) {
+            axeX = element.xAxes + 20
         }
-    }
+  }
+
+  if (batimentArray.array.length >= limite) {
+    console.log(batimentArray.array.length)
+    console.log(limite)
+      axeY += 20;
+      axeX = 0;
+      toLocalStorage(axeY, "axeY");
+      limite += 15
+      toLocalStorage(limite, "limite");
+  }
+
     myBat = new ValuePositionBatiment(axeX,axeY,size1,size2,color,batimentType);
     batimentArray.array.push(myBat);
     toLocalStorage(batimentArray, "batimentArray");
@@ -84,11 +90,9 @@ function draw(batimentType) {
     if (batimentType === "mairie") {
         size1 = 15;
         size2 = 15;
-        axeX += 15;
+        axeX += 20;
   }
-  if (i >= 16) {
-    axeY += 15;
-    axeX = 0;
-  }
+  console.log("je passe par draw", axeX , axeY)
+
 }
 export default draw;

@@ -201,10 +201,8 @@ function buy(value) {
                 toLocalStorage(myMairie, "myMairie");
                 draw("pub");
                 return true;
-                // } else {
-                //   return ["noEnouthRessource", "decoration", value[3], value[2]];
               }
-              break;
+              return ["noEnouthRessource", "decoration", value[3], value[2]];
             default:
         break;
       }
