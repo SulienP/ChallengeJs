@@ -1,4 +1,5 @@
 import draw from "../village/draw";
+import GameManager from "./gameManager";
 
 function drawLastVillage() {
   const canvas = document.querySelector("#myVillage");
@@ -19,7 +20,12 @@ function drawLastVillage() {
 
 
       }, false);
-    };
+  };
+  const beAttack = Math.random()
+  if (beAttack > 0.85) {
+    GameManager(["defend"])
+  }
+  console.log(beAttack)
       for (let i = 0; i < size; i++) {
         ctx.fillStyle = batimentArray.array[i].color;
         ctx.fillRect( 

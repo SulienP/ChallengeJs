@@ -3,6 +3,7 @@ import buy from "./buy.js";
 import upgrade from "./upgrade.js"
 import fight from "../figthGestion/fight.js"
 import ErrorWindos from "./error.js";
+import defend from "../figthGestion/defend.js";
 function GameManager(value) {
   let element = localStorage.getItem("myMairie");
   const myMairie = JSON.parse(element);
@@ -21,6 +22,8 @@ function GameManager(value) {
         upgrade(value);
       } else if (value[0] === "fight") {
         fight(value);
+      } else if (value[0] === "defend") {
+        defend();
       }
     }
     }

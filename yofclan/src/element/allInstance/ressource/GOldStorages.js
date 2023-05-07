@@ -9,7 +9,7 @@ export class GOLDStorage extends Batiment {
       "gold",
       "mining",
       finalId,
-      1000,
+      530,
       1000,
       0,
       "nothing",

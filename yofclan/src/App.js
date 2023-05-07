@@ -11,7 +11,6 @@ import GenrateVillage from './element/village/menu/generateVillage';
 import HelpButton from './element/village/menu/helpButton';
 import "../src/css/AddButtonRessource.css";
 function App() {
-    let canvas = document.querySelector("#myVillage");
   return (
     <>
       <div class="Generate">
@@ -22,9 +21,6 @@ function App() {
       </div>
       <div class="Oil">
         <OilBar></OilBar>
-      </div>
-      <div class="HelpButton">
-        <HelpButton></HelpButton>
       </div>
       <div class="Attaque">
         <Attaque></Attaque>
@@ -37,6 +33,9 @@ function App() {
       </div>
       <div class="AddButtonRessource">
         <AddButtonRessource></AddButtonRessource>
+      </div>
+      <div class="HelpButton">
+        <HelpButton></HelpButton>
       </div>
     </>
   );

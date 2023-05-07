@@ -10,7 +10,7 @@ export class Milice extends Batiment {
       "milice",
       "defense",
       finalId,
-      40,
+      200,
       150,
       50,
       "nothing",

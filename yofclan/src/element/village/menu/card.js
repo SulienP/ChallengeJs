@@ -3,8 +3,6 @@ import { Button } from "@mantine/core";
 import React, { useState } from "react";
 import GameManager from "../../gameManager/gameManager";
 function Card() {
-  let element = localStorage.getItem("myMairie");
-  const myMairie = JSON.parse(element);
   let colorValue = "indigo"
   const [buttonDisplay , buttonDisplaySetState] = useState(true)
   const [militaryState, militarySetState] = useState(false);
@@ -76,10 +74,10 @@ function Card() {
                   variant="gradient"
                   color={colorValue}
                   onClick={() =>
-                    sendBuy(["buy", "military", "oil", 150, "zehi"])
+                    sendBuy(["buy", "military", "oil", 120, "zehi"])
                   }
                 >
-                  ZEHI: 150 oil
+                  ZEHI: 120 oil
                 </Button>
                 <Button
                   variant="gradient"
@@ -118,19 +116,19 @@ function Card() {
                   variant="gradient"
                   color={colorValue}
                   onClick={() =>
-                    sendBuy(["buy", "ressource", "oil", 150, "goldStorage"])
+                    sendBuy(["buy", "ressource", "oil", 530, "goldStorage"])
                   }
                 >
-                  Gold Storage 150 oil
+                  Gold Storage 530 oil
                 </Button>
                 <Button
                   variant="gradient"
                   color={colorValue}
                   onClick={() =>
-                    sendBuy(["buy", "ressource", "gold", 150, "oilStorage"])
+                    sendBuy(["buy", "ressource", "gold", 530, "oilStorage"])
                   }
                 >
-                  Oil Storage 150 gold
+                  Oil Storage 530 gold
                 </Button>
               </Button.Group>
             </div>
@@ -157,28 +155,28 @@ function Card() {
                   variant="gradient"
                   color={colorValue}
                   onClick={() =>
-                    sendBuy(["buy", "defense", "gold", 150, "milice"])
+                    sendBuy(["buy", "defense", "gold", 200, "milice"])
                   }
                 >
-                  Milice 150 Gold
+                  Milice 200 Gold
                 </Button>
                 <Button
                   variant="gradient"
                   color={colorValue}
                   onClick={() =>
-                    sendBuy(["buy", "defense", "gold", 150, "cannon"])
+                    sendBuy(["buy", "defense", "gold", 190, "cannon"])
                   }
                 >
-                  Cannon 150 Gold
+                  Cannon 190 Gold
                 </Button>
                 <Button
                   variant="gradient"
                   color={colorValue}
                   onClick={() =>
-                    sendBuy(["buy", "defense", "gold", 150, "laser"])
+                    sendBuy(["buy", "defense", "gold", 160, "laser"])
                   }
                 >
-                  Laser 150 Gold
+                  Laser 160 Gold
                 </Button>
               </Button.Group>
             </div>
@@ -195,31 +193,75 @@ function Card() {
           </Button>
           <div id="content" style={{ display: miningState ? "block" : "none" }}>
             <div className="all">
-              <Button.Group orientation="vertical" onClick={() => { inverseDisplay("mining");}}>
-                <Button variant="gradient" color={colorValue} onClick={() => sendBuy(["buy", "mining", "oil", 150, "goldMine"])}>
-                  Mine 150 Oil
+              <Button.Group
+                orientation="vertical"
+                onClick={() => {
+                  inverseDisplay("mining");
+                }}
+              >
+                <Button
+                  variant="gradient"
+                  color={colorValue}
+                  onClick={() =>
+                    sendBuy(["buy", "mining", "oil", 150, "goldMine"])
+                  }
+                >
+                  Gold Mine 150 Oil
                 </Button>
-                <Button variant="gradient" color={colorValue} onClick={() => sendBuy(["buy", "mining", "or", 150, "oilMine"])}>
+                <Button
+                  variant="gradient"
+                  color={colorValue}
+                  onClick={() =>
+                    sendBuy(["buy", "mining", "or", 150, "oilMine"])
+                  }
+                >
                   Oil mine 150 Gold
                 </Button>
               </Button.Group>
             </div>
           </div>
-          <Button variant="gradient" gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }} onClick={() => {inverseDisplay("decoration");}}style={{ display: buttonDisplay ? "block" : "none" }}>
+          <Button
+            variant="gradient"
+            gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
+            onClick={() => {
+              inverseDisplay("decoration");
+            }}
+            style={{ display: buttonDisplay ? "block" : "none" }}
+          >
             Decoration
           </Button>
-          <div id="content" style={{ display: decorationState ? "block" : "none" }}>
+          <div
+            id="content"
+            style={{ display: decorationState ? "block" : "none" }}
+          >
             <div className="all">
-              <Button.Group orientation="vertical"onClick={() => {inverseDisplay("decoration")}}>
-                <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 0, "hologram"])}>
+              <Button.Group
+                orientation="vertical"
+                onClick={() => {
+                  inverseDisplay("decoration");
+                }}
+              >
+                <Button
+                  variant="gradient"
+                  color={colorValue}
+                  onClick={() =>
+                    sendBuy(["buy", "decoration", "oil", 0, "hologram"])
+                  }
+                >
                   Hologram 150 Oil
                 </Button>
-                <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 0, "banch"])}>
+                <Button
+                  variant="gradient"
+                  color={colorValue}
+                  onClick={() =>
+                    sendBuy(["buy", "decoration", "oil", 0, "banch"])
+                  }
+                >
                   Banch 150 Oil
                 </Button>
-                <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 0, "pub"])}>
+                {/* <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 0, "pub"])}>
                   Pub 150 Oil
-                </Button>
+                </Button> */}
               </Button.Group>
             </div>
           </div>
