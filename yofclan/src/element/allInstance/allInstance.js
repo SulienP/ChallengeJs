@@ -104,20 +104,14 @@ export class BatimentPositionStructure{
   }
 }
 
-export class BatimentPostion{
-  constructor(
-    xAxes,
-    yAxes,
-    size1,
-    size2,
-    color,
-    name,
-  ) {
+export class BatimentPostion {
+  constructor(xAxes, yAxes, size1, size2, color,name, idColor) {
     this.xAxes = xAxes;
     this.yAxes = yAxes;
     this.size1 = size1;
     this.size2 = size2;
     this.color = color;
     this.name = name;
+    this.name = idColor;
   }
 }
