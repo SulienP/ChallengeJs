@@ -80,3 +80,11 @@
   margin-left: 50%;
   margin-right: 50%;
 }
+
+.upgrade{
+  z-index: 9999;
+  position: absolute; 
+  left:25%;
+  right: 25%;
+  bottom: 5%;
+}

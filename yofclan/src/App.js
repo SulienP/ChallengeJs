@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, { useState } from "react";
 import Shop from "../src/element/village/menu/shop.js";
 import Village from '../src/element/village/village.js';
 import OilBar from '../src/element/village/menu/oilBar.js'
@@ -10,7 +10,10 @@ import AddButtonRessource from "../src/element/village/menu/addButtonRessouce.js
 import GenrateVillage from './element/village/menu/generateVillage';
 import HelpButton from './element/village/menu/helpButton';
 import "../src/css/AddButtonRessource.css";
+import UpgradeBatiment from './element/village/menu/upgradeBatimentElement';
 function App() {
+    const [upgradeDisplay, upgradeDisplaySetStae] = useState(false);
+
   return (
     <>
       <div class="Generate">
@@ -36,6 +39,9 @@ function App() {
       </div>
       <div class="HelpButton">
         <HelpButton></HelpButton>
+      </div>
+      <div class="upgrade">
+        <UpgradeBatiment></UpgradeBatiment>
       </div>
     </>
   );

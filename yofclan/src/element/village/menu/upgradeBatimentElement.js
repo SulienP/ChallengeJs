@@ -1,17 +1,19 @@
 import { Button } from "@mantine/core";
 import upgrade from "../../gameManager/upgrade";
+import "../../../css/uppGradeDiv.css"
+import React, { useState } from "react";
 
-let displayValue = false
-
-function upgradeBatiment(batimentName, cost, currentLvl) {
-    displayValue = true;
+function UpgradeBatiment(batimentName, cost, currentLvl) {
+  const [upgradeDisplay, upgradeDisplaySetState] = useState(false);
+  function incverseDisplayUpgrade() {
+    upgradeDisplaySetState(!upgradeDisplay);
+  }
     return (
-      <>
-            <div class="uprgade" style={{ display: displayValue } }>
-                ${batimentName},<Button onClick={() => { upgrade();   displayValue = false }}>${cost}</Button>, $
-          {currentLvl}
+        <div className="upgrade"style={{ display: upgradeDisplay ? "block" : "none" }}>
+          
+          <Button onClick={incverseDisplayUpgrade}> </Button>{" "}
+          
         </div>
-      </>
     );
 }
-export default upgradeBatiment;
+export default UpgradeBatiment;
