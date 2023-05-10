@@ -10,10 +10,9 @@ function defend() {
     for (const element of myMairie.currentMilitaryBat) {
       defendValue = defendValue + element.defense;
     }
-    console.log(defendValue);
+    
     defendValue = defendValue + 15
     let pourcentOfdefeat = Math.random() * (defendValue - (defendValue - 1) + 1) + defendValue - 1;
-    console.log( pourcentOfdefeat );
     if (pourcentOfdefeat > (defendValue - 0.3)) {
         const lessGold = myMairie.currentGold - (100 * myMairie.level)
          myMairie.currentGold = lessGold;

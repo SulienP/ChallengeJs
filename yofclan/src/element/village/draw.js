@@ -35,15 +35,15 @@ function draw(batimentType) {
       color = "#FFCF4D";
       break;
       case "milice":
-        idColor = myMairie.currentMilitaryBat.length;
+        idColor = myMairie.currentNumberDefense.length;
       color = "#FF0000";
       break;
       case "cannon":
-        idColor = myMairie.currentMilitaryBat.length;
+        idColor = myMairie.currentNumberDefense.length;
       color = "#D50000";
       break;
       case "laser":
-        idColor = myMairie.currentMilitaryBat.length;
+        idColor = myMairie.currentNumberDefense.length;
       color = "#A70000";
       break;
       case "goldMine":

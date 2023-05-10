@@ -92,7 +92,7 @@ function buy(value) {
               newBat = new Milice();
               myMairie.currentNumberDefense.push(newBat);
               myMairie.currentGold = myMairie.currentGold - value[3];
-              toLocalStorage(myMairie)              ;    
+              toLocalStorage(myMairie, "myMairie");    
               draw("milice");
               return true;
             } else {

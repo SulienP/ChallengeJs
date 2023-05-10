@@ -6,7 +6,7 @@ export class Cannon extends Batiment {
     Cannon.id++;
     let finalId = "cannon" + Cannon.id.toString();
     super(
-      "milice",
+      "cannon",
       "defense",
       finalId,
       190,

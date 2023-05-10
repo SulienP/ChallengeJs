@@ -12,7 +12,6 @@ import HelpButton from './element/village/menu/helpButton';
 import "../src/css/AddButtonRessource.css";
 import UpgradeBatiment from './element/village/menu/upgradeBatimentElement';
 function App() {
-    const [upgradeDisplay, upgradeDisplaySetStae] = useState(false);
 
   return (
     <>
