@@ -1,8 +1,14 @@
-/*
-    TODO: FIght attaque contre la défense, si défaite on retire un nombre de soldat random ou en fonction de la défaite ( diff entre déffence et attaque en pourcentage)
-*/
+
 function fight(){
-    
+    let element = localStorage.getItem("myMairie");
+    const myMairie = JSON.parse(element);
+    let attackValue = 0;
+    let defenseValue = 0;
+    for (const element of myMairie.stockageOfFigthers) {
+        attackValue = attackValue + element.attaque;
+        defenseValue = defenseValue + element.defense;
+    }
+    console.log(attackValue, defenseValue)
 }
 
 export default fight;

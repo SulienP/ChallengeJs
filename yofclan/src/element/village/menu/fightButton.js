@@ -18,7 +18,6 @@ function Attaque() {
     <Button
     variant="subtle"color="red"onClick={() => {inverseDisplayFight();}}
     >
-    {" "}
     Fight
     </Button>
     <div class="container"style={{ display: displayFightDiv ? "block" : "none" }}>

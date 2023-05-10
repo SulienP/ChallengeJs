@@ -5,7 +5,7 @@ export class Soldat extends Fighters {
  
   constructor() {
     let finalId = "Soldat" + newId.toString();
-    super("milice", "soldat", finalId, 10, 10, 5, 15, 0, 0,0);
+    super("Soldat", "soldat", finalId, 10, 10, 5, 15, 0, 0, 0);
   }
 }
 export class Machine extends Fighters {
