@@ -5,7 +5,7 @@ export class MAIRIE extends Mairie {
   constructor() {
     MAIRIE.newId++
     let finalId = "mairie" + MAIRIE.newId.toString();
-    super("mairie", "mairie", finalId, 1, 15, 0, 1,0, 1000,5,5,2,2,5,[],[],[],[],[],5,[], 1000, 1000,"gold");
+    super("mairie", "mairie", finalId, 1, 15, 0, 1,0, 1000,5,5,2,2,5,[],[],[],[],[],5,[], 1000, 1000,"gold",70,0,[]);
   }
 }
 /*

@@ -23,14 +23,16 @@ function buy(value) {
           case "zehi":     
           newBat = new Zehi();
           myMairie.currentMilitaryBat.push(newBat);
-          myMairie.currentOil = myMairie.currentOil - value[3];
+            myMairie.currentOil = myMairie.currentOil - value[3];
+          myMairie.maxPlace = myMairie.maxPlace + newBat.place
           toLocalStorage(myMairie, "myMairie");
           draw("zehi");
           return true;
           case "militaryBase":
           newBat = new Camps();  
           myMairie.currentMilitaryBat.push(newBat);
-          myMairie.currentOil = myMairie.currentOil - value[3];
+            myMairie.currentOil = myMairie.currentOil - value[3];
+            myMairie.maxPlace = myMairie.maxPlace + newBat.place
           toLocalStorage(myMairie, "myMairie");
           draw("militaryBase");
           return true;

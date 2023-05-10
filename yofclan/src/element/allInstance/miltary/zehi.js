@@ -20,7 +20,7 @@ export  class Zehi extends Batiment {
       0,
       1,
       "oil",
-      3
+      3,200
     );
   }
 }

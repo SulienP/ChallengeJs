@@ -13,11 +13,11 @@ function HelpButton() {
       <Button onClick={displayHelp}>Help</Button>
       <div class="help" style={{ display: helpDisplay ? "block" : "none" }}>
         <CloseButton
-          title="Close popover"
           size="xl"
           iconSize={20}
-          onClick={displayHelp}
+          onClick={ () => {displayHelp()}}
           style={{ position: "absolute", right: "0" }}
+          color="red"
         />
         <div id="titleHelp">You need some help?</div>
         <hr></hr>

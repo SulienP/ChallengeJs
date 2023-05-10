@@ -14,7 +14,8 @@ export class Batiment {
     currentStockage,
     level,
     typeAmelioration,
-    maxLevel
+    maxLevel,
+    place
   ) {
     this.name = name;
     this.type = type;
@@ -31,6 +32,7 @@ export class Batiment {
     this.level = level;
     this.typeAmelioration = typeAmelioration;
     this.maxLevel = maxLevel;
+    this.place = place;
   }
 }
 
@@ -61,7 +63,10 @@ export class Mairie {
     currentMilitaryBat,
     currentOil,
     currentGold,
-    typeAmelioration
+    typeAmelioration,
+    maxPlace,
+    currentPlaceFighters,
+    stockageOfFigthers
   ) {
     this.name = name;
     this.id = id;
@@ -87,6 +92,9 @@ export class Mairie {
     this.currentOil = currentOil;
     this.currentGold = currentGold;
     this.typeAmelioration = typeAmelioration;
+    this.maxPlace = maxPlace;
+    this.currentPlaceFighters = currentPlaceFighters
+    this.stockageOfFigthers = stockageOfFigthers;
   }
 }
 

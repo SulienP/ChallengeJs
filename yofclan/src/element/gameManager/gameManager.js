@@ -5,20 +5,21 @@ import fight from "../figthGestion/fight.js"
 import ErrorWindos from "./error.js";
 import defend from "../figthGestion/defend.js";
 import { Button } from "@mantine/core";
+import training from "./training.js";
 function GameManager(value) {
   console.log(value)
   let element = localStorage.getItem("myMairie");
   const myMairie = JSON.parse(element);
   if (myMairie === null) {
     StartGame();
-    // GameManager(["loadVillage"])
   } else {
     if (value !== undefined) {
       if (value[0] === "buy") {
         const error = buy(value);
-        if (error)
-        if (error.length > 0) {
-          ErrorWindos(error);       
+        if (error) {
+          if (error.length > 0) {
+            ErrorWindos(error);
+          }
         }
       } else if (value[0] === "upgrade") {
         const elementStyle = document.querySelector("#upgrade");
@@ -31,11 +32,8 @@ function GameManager(value) {
         fight(value);
       } else if (value[0] === "defend") {
         defend();
-      } else if (value[0] === "trained") {
-        const elementStyle = document.querySelector("#upgrade");
-        
-        elementStyle.style.display = "none";
-        
+      } else if (value[0] === "training") {
+        training(value)
       }
     }
   }

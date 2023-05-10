@@ -21,7 +21,7 @@ export class Camps extends Batiment {
       0,
       1,
       "oil",
-      3
+      3,200
     );
   }
 }

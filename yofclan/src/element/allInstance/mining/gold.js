@@ -20,7 +20,7 @@ export class GoldMine extends Batiment {
       0,
       1,
       "oil",
-      5
+      5,0
     );
   }
 }

@@ -1,11 +1,10 @@
 import './App.css';
-import React, { useState } from "react";
 import Shop from "../src/element/village/menu/shop.js";
 import Village from '../src/element/village/village.js';
 import OilBar from '../src/element/village/menu/oilBar.js'
 import GoldBar from "../src/element/village/menu/goldBar.js";
 import GameManager from "../src/element/gameManager/gameManager.js";
-import Attaque from "../src/element/village/menu/attaque.js";
+import Attaque from "../src/element/village/menu/fightButton";
 import AddButtonRessource from "../src/element/village/menu/addButtonRessouce.js";
 import GenrateVillage from './element/village/menu/generateVillage';
 import HelpButton from './element/village/menu/helpButton';

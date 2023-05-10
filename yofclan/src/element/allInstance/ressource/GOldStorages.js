@@ -21,7 +21,7 @@ export class GOLDStorage extends Batiment {
       1,
       400,
       "oil",
-      5
+      5,0
     );
   }
 }
