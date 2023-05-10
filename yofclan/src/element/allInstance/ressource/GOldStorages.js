@@ -6,8 +6,8 @@ export class GOLDStorage extends Batiment {
     GOLDStorage.id++;
     let finalId = "GOLDStorage" + GOLDStorage.id.toString();
     super(
-      "gold",
-      "mining",
+      "goldStorage",
+      "storage",
       finalId,
       530,
       1000,
@@ -19,7 +19,9 @@ export class GOLDStorage extends Batiment {
       "gold",
       0,
       1,
-      400
+      400,
+      "oil",
+      5
     );
   }
 }

@@ -1,5 +1,3 @@
-import { Button } from "@mantine/core";
-import ReactDOMServer from "react-dom/server";
 import GameManager from "./gameManager";
 
 function checkColorAtClick() {
@@ -106,28 +104,17 @@ function checkColorAtClick() {
         const button = document.createElement("button");
         button.innerText = costValue;
         button.addEventListener("click", () => {
-          GameManager(["upgrade", batimentCheck, idColorChecking - 1]);
+          GameManager(["upgrade", batimentCheck, idColorChecking - 1, nameBat]);
         });
 
         const texte = document.createTextNode(
-          ` ${nameBat}  current level ${currentLvlValue} amelioration price: `
+          `  ${nameBat}  current level ${currentLvlValue} amelioration price: `
         );
+  
         elementStyle.appendChild(texte);
         elementStyle.appendChild(button);
-        if (element.color.toLowerCase() === "#0400ff") {
-         trainedButton()
-        } else if (element.color.toLowerCase() === "#2c29ff"){
-         trainedButton()
-        }
         break;
-        function trainedButton() {
-     const buttonTrained = document.createElement("button");
-     buttonTrained.innerText = "trained";
-     elementStyle.appendChild(buttonTrained);
-     buttonTrained.addEventListener("click", () => {
-       GameManager("[trained]");
-     });
-  }
+    
       }
     }
   },

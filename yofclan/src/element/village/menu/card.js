@@ -259,9 +259,7 @@ function Card() {
                 >
                   Banch 150 Oil
                 </Button>
-                {/* <Button variant="gradient" color={colorValue} onClick={() =>sendBuy(["buy", "decoration", "oil", 0, "pub"])}>
-                  Pub 150 Oil
-                </Button> */}
+
               </Button.Group>
             </div>
           </div>

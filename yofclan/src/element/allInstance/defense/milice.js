@@ -19,7 +19,9 @@ export class Milice extends Batiment {
       0,
       "nothing",
       0,
-      1
+      1,
+      "gold",
+      5
     );
   }
 }

@@ -1,7 +1,6 @@
 
 import { CloseButton } from "@mantine/core";
 import "../../../css/uppGradeDiv.css"
-import GameManager from "../../gameManager/gameManager";
 import {useState} from "react"
 function UpgradeBatiment(props) {
       const [buttonDisplay, buttonDisplaySetState] = useState(false);

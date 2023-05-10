@@ -10,7 +10,6 @@ import { Laser } from "../allInstance/defense/laser.js";
 import { Milice } from "../allInstance/defense/milice.js";
 import { Banch } from "../allInstance/decoration/banch"
 import { Holograme } from "../allInstance/decoration/holograme.js"
-import { Pub } from "../allInstance/decoration/pub.js";
 import draw from "../village/draw.js"
 import toLocalStorage from "./toLocalStorage.js";
 function buy(value) {
@@ -194,14 +193,7 @@ function buy(value) {
             }  else {
               return ["noEnouthRessource", "decoration", value[3], value[2]];
             }
-            case "pub ":
-              if (myMairie.currentOil > value[3]) {
-                newBat = new Pub();
-                myMairie.currentOil = myMairie.currentOil - value[3];
-                toLocalStorage(myMairie, "myMairie");
-                draw("pub");
-                return true;
-              }
+          
               return ["noEnouthRessource", "decoration", value[3], value[2]];
             default:
         break;

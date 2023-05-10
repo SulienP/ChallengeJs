@@ -19,6 +19,8 @@ export class Holograme extends Batiment {
       0,
       "nothing",
       0,
+      0,
+      "nothing",
       0
     );
   }

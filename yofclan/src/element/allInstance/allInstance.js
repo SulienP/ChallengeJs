@@ -1,20 +1,37 @@
-export class Batiment{
-    constructor(name, type, id,price, ameliorationPrice,defense, typeProductions, productionByHour,productionMax, maxStorage, storageType,currentStockage, level ) {
-        this.name = name
-        this.type = type
-      this.id = id
-      this.price = price
-      this.ameliorationPrice = ameliorationPrice
-      this.defense = defense
-      this.typeProductions = typeProductions
-      this.productionByHour = productionByHour
-      this.productionMax = productionMax
-      this.maxStorage = maxStorage
-      this.storageType = storageType
-      this.currentStockage = currentStockage
-      this.level = level
-
-    }
+export class Batiment {
+  constructor(
+    name,
+    type,
+    id,
+    price,
+    ameliorationPrice,
+    defense,
+    typeProductions,
+    productionByHour,
+    productionMax,
+    maxStorage,
+    storageType,
+    currentStockage,
+    level,
+    typeAmelioration,
+    maxLevel
+  ) {
+    this.name = name;
+    this.type = type;
+    this.id = id;
+    this.price = price;
+    this.ameliorationPrice = ameliorationPrice;
+    this.defense = defense;
+    this.typeProductions = typeProductions;
+    this.productionByHour = productionByHour;
+    this.productionMax = productionMax;
+    this.maxStorage = maxStorage;
+    this.storageType = storageType;
+    this.currentStockage = currentStockage;
+    this.level = level;
+    this.typeAmelioration = typeAmelioration;
+    this.maxLevel = maxLevel;
+  }
 }
 
 
@@ -43,7 +60,8 @@ export class Mairie {
     maxMilitary,
     currentMilitaryBat,
     currentOil,
-    currentGold
+    currentGold,
+    typeAmelioration
   ) {
     this.name = name;
     this.id = id;
@@ -68,6 +86,7 @@ export class Mairie {
     this.currentMilitaryBat = currentMilitaryBat;
     this.currentOil = currentOil;
     this.currentGold = currentGold;
+    this.typeAmelioration = typeAmelioration;
   }
 }
 

@@ -4,10 +4,10 @@ export class OilSTORAGE extends Batiment {
   static id = 0;
   constructor() {
     OilSTORAGE.id++;
-    let finalId = "GOLDStorage" + OilSTORAGE.id.toString();
+    let finalId = "oilStorage" + OilSTORAGE.id.toString();
     super(
-      "oil",
-      "mining",
+      "oilStorage",
+      "storage",
       finalId,
       1000,
       1000,
@@ -18,7 +18,9 @@ export class OilSTORAGE extends Batiment {
       1000,
       "oil",
       0,
-      1
+      1,
+      "gold",
+      5
     );
   }
 }
