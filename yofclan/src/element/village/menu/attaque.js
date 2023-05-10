@@ -6,8 +6,8 @@ import GameManager from "../../gameManager/gameManager.js";
 function Attaque() {
   return (
     <Button variant="subtle" color="red"
-
-      onClick={GameManager(["fight"])}> Fight
+    onClick={ () => { GameManager(["fight"])}
+}> Fight
     </Button>
   );
 }

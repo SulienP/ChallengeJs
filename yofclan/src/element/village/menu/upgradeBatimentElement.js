@@ -1,19 +1,19 @@
-import { Button } from "@mantine/core";
-import upgrade from "../../gameManager/upgrade";
-import "../../../css/uppGradeDiv.css"
-import React, { useState } from "react";
 
-function UpgradeBatiment(batimentName, cost, currentLvl) {
-  const [upgradeDisplay, upgradeDisplaySetState] = useState(false);
-  function incverseDisplayUpgrade() {
-    upgradeDisplaySetState(!upgradeDisplay);
+import { CloseButton } from "@mantine/core";
+import "../../../css/uppGradeDiv.css"
+import GameManager from "../../gameManager/gameManager";
+import {useState} from "react"
+function UpgradeBatiment(props) {
+      const [buttonDisplay, buttonDisplaySetState] = useState(false);
+
+  function inverseDisplay() {
+    buttonDisplaySetState(!buttonDisplay)
   }
-    return (
-        <div className="upgrade"style={{ display: upgradeDisplay ? "block" : "none" }}>
-          
-          <Button onClick={incverseDisplayUpgrade}> </Button>{" "}
-          
-        </div>
-    );
+  return (
+    <div id="upgrade" className="upgrade" style={{ display: buttonDisplay ? "block" : "none" }}>
+      <CloseButton style={{ display :"block"}} onClick={()=>{ inverseDisplay()}}>
+      </CloseButton>
+    </div>
+  );
 }
 export default UpgradeBatiment;

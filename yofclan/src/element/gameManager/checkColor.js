@@ -1,4 +1,6 @@
-import UpgradeBatiment from "../village/menu/upgradeBatimentElement";
+import { Button } from "@mantine/core";
+import ReactDOMServer from "react-dom/server";
+import GameManager from "./gameManager";
 
 function checkColorAtClick() {
   let value = localStorage.getItem("batimentArray");
@@ -34,48 +36,103 @@ function checkColorAtClick() {
         switch (nameBat) {
           case "mairie":
             batimentCheck = myMairie;
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
             break;
           case "zehi":
             batimentCheck = myMairie.currentMilitaryBat[idColorChecking - 1];
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
             break;
           case "militaryBase":
             batimentCheck = myMairie.currentMilitaryBat[idColorChecking - 1];
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
             break;
           case "goldStorage":
             batimentCheck =
               myMairie.currentNumberGOldStorage[idColorChecking - 1];
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
             break;
           case "oilStorage":
             batimentCheck =
               myMairie.currentNumberOilStorage[idColorChecking - 1];
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
             break;
           case "milice":
             batimentCheck = myMairie.currentNumberDefense[idColorChecking - 1];
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
             break;
           case "cannon":
-            batimentCheck = myMairie.currentNumberDefense[idColorChecking -1 ];
+            batimentCheck = myMairie.currentNumberDefense[idColorChecking - 1];
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
             break;
           case "laser":
             batimentCheck = myMairie.currentNumberDefense[idColorChecking - 1];
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
             break;
           case "goldMine":
             batimentCheck =
               myMairie.currentNumberGOldMining[idColorChecking - 1];
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
             break;
           case "oilMine":
             batimentCheck =
               myMairie.currentNumberOilMining[idColorChecking - 1];
+            currentLvlValue = batimentCheck.level.toString();
+            costValue = batimentCheck.ameliorationPrice.toString();
+            break;
+          case "hologram":
+            currentLvlValue = 0;
+            costValue = 0;
+            break;
+          case "banch":
+            currentLvlValue = 0;
+            costValue = 0;
             break;
           default:
             break;
         }
-         currentLvlValue = batimentCheck.level.toString();
-        costValue = batimentCheck.ameliorationPrice.toString();
-        console.log(currentLvlValue, costValue , nameBat)
+        console.log(element.color.toLowerCase());
+        const elementStyle = document.querySelector("#upgrade");
+        elementStyle.style.display = "block";
+
+        const button = document.createElement("button");
+        button.innerText = costValue;
+        button.addEventListener("click", () => {
+          GameManager(["upgrade", batimentCheck, idColorChecking - 1]);
+        });
+
+        const texte = document.createTextNode(
+          ` ${nameBat}  current level ${currentLvlValue} amelioration price: `
+        );
+        elementStyle.appendChild(texte);
+        elementStyle.appendChild(button);
+        if (element.color.toLowerCase() === "#0400ff") {
+         trainedButton()
+        } else if (element.color.toLowerCase() === "#2c29ff"){
+         trainedButton()
+        }
+        break;
+        function trainedButton() {
+     const buttonTrained = document.createElement("button");
+     buttonTrained.innerText = "trained";
+     elementStyle.appendChild(buttonTrained);
+     buttonTrained.addEventListener("click", () => {
+       GameManager("[trained]");
+     });
+  }
       }
     }
   },
-
+  
   );
+  
 }
 export default checkColorAtClick;

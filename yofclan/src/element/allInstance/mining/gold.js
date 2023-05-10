@@ -4,7 +4,7 @@ export class GoldMine extends Batiment {
   static id = 0;
   constructor() {
     GoldMine.id++;
-    let finalId = "Zehi" + GoldMine.id.toString();
+    let finalId = "GOLDMINE" + GoldMine.id.toString();
     super(
       "gold",
       "mining",
