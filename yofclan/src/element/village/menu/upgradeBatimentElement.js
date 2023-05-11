@@ -5,7 +5,7 @@ import "../../../css/uppGradeDiv.css"
 // ! Upgrade button
 function UpgradeBatiment(props) {
       const [buttonDisplay, buttonDisplaySetState] = useState(false);
-      const [closeButtonDisplay , closeButtonDisplaySetState] = useState(true);
+      const [closeButtonDisplay] = useState(true);
   function inverseDisplay() {
     buttonDisplaySetState(!buttonDisplay)
   }
