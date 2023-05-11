@@ -5,13 +5,13 @@ import "../../../css/uppGradeDiv.css"
 // ! Upgrade button
 function UpgradeBatiment(props) {
       const [buttonDisplay, buttonDisplaySetState] = useState(false);
-
+      const [closeButtonDisplay , closeButtonDisplaySetState] = useState(true);
   function inverseDisplay() {
     buttonDisplaySetState(!buttonDisplay)
   }
   return (
     <div id="upgrade" className="upgrade" style={{ display: buttonDisplay ? "block" : "none" }}>
-      <CloseButton style={{ display :"block"}} onClick={()=>{ inverseDisplay()}}>
+      <CloseButton color="red" style={{ display : closeButtonDisplay ? "block" : "block"}} onClick={()=>{ inverseDisplay()}}>
       </CloseButton>
     </div>
   );
