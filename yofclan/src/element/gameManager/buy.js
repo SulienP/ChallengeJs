@@ -191,7 +191,7 @@ function buy(value) {
               return ["noEnouthRessource", "decoration", value[3], value[2]];
             }
             case "banch":
-            if(myMairie.currentOil > value[3]) {
+              if (myMairie.currentOil > value[3]) {
               newBat = new Banch();
               myMairie.currentOil = myMairie.currentOil - value[3];
               toLocalStorage(myMairie, "myMairie");

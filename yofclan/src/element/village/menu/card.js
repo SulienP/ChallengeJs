@@ -247,7 +247,7 @@ function Card() {
                   variant="gradient"
                   color={colorValue}
                   onClick={() =>
-                    sendBuy(["buy", "decoration", "oil", 0, "hologram"])
+                    sendBuy(["buy", "decoration", "oil", 150, "hologram"])
                   }
                 >
                   Hologram 150 Oil
@@ -256,7 +256,7 @@ function Card() {
                   variant="gradient"
                   color={colorValue}
                   onClick={() =>
-                    sendBuy(["buy", "decoration", "oil", 0, "banch"])
+                    sendBuy(["buy", "decoration", "oil", 150, "banch"])
                   }
                 >
                   Banch 150 Oil
