@@ -1,3 +1,4 @@
+import AddRessource from "./addRessource";
 import GameManager from "./gameManager";
 // !Otherwise we return error messages and check the color
 function checkColorAtClick() {
@@ -126,6 +127,17 @@ function checkColorAtClick() {
          //* Adding values ​​to display the display of my div
         elementStyle.appendChild(texte);
         elementStyle.appendChild(button);
+        console.log(nameBat)
+        if (nameBat === "goldMine" || nameBat === "oilMine") {
+          console.log("ici")
+          const buttonAddRessource = document.createElement("button");
+          buttonAddRessource.innerText = "add ressource";
+               buttonAddRessource.addEventListener("click", () => {
+                 AddRessource();
+               });
+                           elementStyle.appendChild(buttonAddRessource);
+
+        }
         break;
       }
     }
