@@ -1,3 +1,6 @@
+/*
+ * Definition of batiment class 
+ */
 export class Batiment {
   constructor(
     name,
@@ -35,9 +38,9 @@ export class Batiment {
     this.place = place;
   }
 }
-
-
-
+/*
+ * Definition of mairie class 
+ */
 export class Mairie {
   constructor(
     name,
@@ -93,11 +96,13 @@ export class Mairie {
     this.currentGold = currentGold;
     this.typeAmelioration = typeAmelioration;
     this.maxPlace = maxPlace;
-    this.currentPlaceFighters = currentPlaceFighters
+    this.currentPlaceFighters = currentPlaceFighters;
     this.stockageOfFigthers = stockageOfFigthers;
   }
 }
-
+/*
+ * Definition of fighters class 
+ */
 export class Fighters {
   constructor(
     name,
@@ -113,7 +118,7 @@ export class Fighters {
   ) {
     this.name = name;
     this.type = type;
-        this.id = id;
+    this.id = id;
     this.place = place;
     this.attaque = attaque;
     this.defense = defense;
@@ -123,16 +128,19 @@ export class Fighters {
     this.ameliorationPrice = ameliorationPrice;
   }
 }
-
-
-export class BatimentPositionStructure{
+/*
+ * Definition of postiotion of all batiment class class 
+ */
+export class BatimentPositionStructure {
   constructor(array) {
     this.array = array;
   }
 }
-
+/*
+ * Definition of one batiment class 
+ */
 export class BatimentPostion {
-  constructor(xAxes, yAxes, size1, size2, color,name, idColor) {
+  constructor(xAxes, yAxes, size1, size2, color, name, idColor) {
     this.xAxes = xAxes;
     this.yAxes = yAxes;
     this.size1 = size1;

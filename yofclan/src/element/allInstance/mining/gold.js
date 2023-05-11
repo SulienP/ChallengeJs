@@ -1,5 +1,7 @@
 import { Batiment } from "../allInstance.js";
-
+/*
+  * Définition of a goldMine
+ */
 export class GoldMine extends Batiment {
   static id = 0;
   constructor() {

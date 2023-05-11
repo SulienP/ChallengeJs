@@ -1,6 +1,7 @@
 import { Button } from "@mantine/core";
 import React, { useState } from "react";
 import Card from "./card";
+// ! Shop button
 function Shop() {
   const [state, setState] = useState(false);
   function inverseDisplay() {

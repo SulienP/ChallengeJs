@@ -5,10 +5,7 @@ import { GoldMine } from "../allInstance/mining/gold.js";
 import { OILMINE } from "../allInstance/mining/oil.js";
 import { BatimentPostionExtended } from "../allInstance/batimentPosition.js";
 import toLocalStorage from "./toLocalStorage.js";
-
-
-
-
+// !starting function of the game, it defines the town hall and the first buildings and get the date
 function StartGame() {
     
   let axeY = 0;
@@ -19,6 +16,8 @@ function StartGame() {
   const goldMine = new GoldMine();
   const oilMine = new OILMINE();
   const batiment = new BatimentPostionExtended();
+
+  // * Adding Batiment to the mairie 
   myMairie.currentNumber++;
   myMairie.currentNumberGOldMining.push(goldMine);
   myMairie.currentNumberOilMining.push(oilMine);

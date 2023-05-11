@@ -1,5 +1,7 @@
 import { Button } from "@mantine/core";
-import  AddRessource  from "../../gameManager/addRessource.js";
+import AddRessource from "../../gameManager/addRessource.js";
+
+//!add button
 function AddButtonRessource() {
     return (
       <>

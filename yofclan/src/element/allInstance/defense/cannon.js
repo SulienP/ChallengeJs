@@ -1,5 +1,7 @@
 import { Batiment } from "../allInstance.js";
-
+/*
+  * Définition of a cannon
+ */
 export class Cannon extends Batiment {
   static id = 0;
   constructor() {

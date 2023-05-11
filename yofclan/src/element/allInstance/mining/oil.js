@@ -1,5 +1,7 @@
 import { Batiment } from "../allInstance.js";
-
+/*
+  * Définition of a oilMine
+ */
 export class OILMINE extends Batiment {
   static id = 0;
   constructor() {

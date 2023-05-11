@@ -4,6 +4,8 @@ import toLocalStorage from "../gameManager/toLocalStorage.js";
 let axeX = 0;
 let size1 = 15;
 let size2 = 15;
+
+// !Function to draw a building
 function draw(batimentType) {
   let axeY = JSON.parse(localStorage.getItem("axeY"));
   let limite = JSON.parse(localStorage.getItem("limite"));
@@ -13,87 +15,98 @@ function draw(batimentType) {
   let color = "";
   let myBat = "";
   let idColor = 0;
-    switch (batimentType) {
-      case "mairie": 
-        idColor =1
+  // !building definition
+  switch (batimentType) {
+    case "mairie":
+      idColor = 1;
       color = "#FF9700";
       break;
-      case "zehi":
-        idColor = myMairie.currentMilitaryBat.length
+    case "zehi":
+      idColor = myMairie.currentMilitaryBat.length;
       color = "#2C29FF";
       break;
-      case "militaryBase":
-        idColor = myMairie.currentMilitaryBat.length;
+    case "militaryBase":
+      idColor = myMairie.currentMilitaryBat.length;
       color = "#0400FF";
       break;
-      case "goldStorage":
-        idColor = myMairie.currentNumberGOldStorage.length;
+    case "goldStorage":
+      idColor = myMairie.currentNumberGOldStorage.length;
       color = "#FCC42E";
       break;
-      case "oilStorage":
-        idColor = myMairie.currentNumberOilStorage.length;
+    case "oilStorage":
+      idColor = myMairie.currentNumberOilStorage.length;
       color = "#FFCF4D";
       break;
-      case "milice":
-        idColor = myMairie.currentNumberDefense.length;
+    case "milice":
+      idColor = myMairie.currentNumberDefense.length;
       color = "#FF0000";
       break;
-      case "cannon":
-        idColor = myMairie.currentNumberDefense.length;
+    case "cannon":
+      idColor = myMairie.currentNumberDefense.length;
       color = "#D50000";
       break;
-      case "laser":
-        idColor = myMairie.currentNumberDefense.length;
+    case "laser":
+      idColor = myMairie.currentNumberDefense.length;
       color = "#A70000";
       break;
-      case "goldMine":
-        idColor = myMairie.currentNumberGOldMining.length;
+    case "goldMine":
+      idColor = myMairie.currentNumberGOldMining.length;
       color = "#00A726";
       break;
-      case "oilMine":
-        idColor = myMairie.currentNumberOilMining.length;
+    case "oilMine":
+      idColor = myMairie.currentNumberOilMining.length;
       color = "#007019";
       break;
-      case "hologram":
+    case "hologram":
       color = "#B603A6";
       break;
-      case "banch":
+    case "banch":
       color = "#FA00E3";
       break;
     default:
       break;
   }
-    let value = localStorage.getItem("batimentArray");
-    let batimentArray = JSON.parse(value);
-    if (batimentArray !== undefined) {
-        for (const element of batimentArray.array) {
-            axeX = element.xAxes + 20
-        }
+  //* Retrieving localStorage
+  let value = localStorage.getItem("batimentArray");
+  let batimentArray = JSON.parse(value);
+
+  // *Verification of whether there is already a building to draw in order to add a value to x to prevent 2 drawings from ending up on top of each other
+  if (batimentArray !== undefined) {
+    for (const element of batimentArray.array) {
+      axeX = element.xAxes + 20;
+    }
   }
 
+  //* Check if the building will not be outside the canvas
   if (batimentArray.array.length >= limite) {
-      axeY += 20;
-      axeX = 0;
-      toLocalStorage(axeY, "axeY");
-      limite += 15
-      toLocalStorage(limite, "limite");
+    axeY += 20;
+    axeX = 0;
+    toLocalStorage(axeY, "axeY");
+    limite += 15;
+    toLocalStorage(limite, "limite");
   }
 
   myBat = new ValuePositionBatiment(axeX, axeY, size1, size2, color, batimentType, idColor);
-    batimentArray.array.push(myBat);
-    toLocalStorage(batimentArray, "batimentArray");
-    let newValue = localStorage.getItem("batimentArray");
-    let batiment = JSON.parse(newValue);
-    let i = batiment.array.length - 1;
-    ctx.fillStyle = batiment.array[i].color;
-    ctx.fillRect(batiment.array[i].xAxes, batiment.array[i].yAxes, batiment.array[i].size1, batiment.array[i].size2);
-    axeX += 18;
-    if (batimentType === "mairie") {
-        size1 = 15;
-        size2 = 15;
-        axeX += 20;
+  // *Send then recovery of the building in the local storage
+  batimentArray.array.push(myBat);
+  toLocalStorage(batimentArray, "batimentArray");
+  let newValue = localStorage.getItem("batimentArray");
+  let batiment = JSON.parse(newValue);
+  let i = batiment.array.length - 1;
+  // *Parcours of tiotu my buildings in order to avoid the drawing of two buildings on top of each other
+  ctx.fillStyle = batiment.array[i].color;
+  ctx.fillRect(
+    batiment.array[i].xAxes,
+    batiment.array[i].yAxes,
+    batiment.array[i].size1,
+    batiment.array[i].size2
+  );
+  axeX += 18;
+  if (batimentType === "mairie") {
+    size1 = 15;
+    size2 = 15;
+    axeX += 20;
   }
-    checkColorAtClick();
-
+  checkColorAtClick();
 }
 export default draw;

@@ -1,5 +1,7 @@
 import { Batiment } from "../allInstance.js";
- 
+ /*
+  * Définition of a goldStorage
+ */
 export class GOLDStorage extends Batiment {
   static id = 0;
   constructor() {

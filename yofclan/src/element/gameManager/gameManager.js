@@ -4,12 +4,14 @@ import upgrade from "./upgrade.js"
 import fight from "../figthGestion/fight.js"
 import ErrorWindos from "./error.js";
 import defend from "../figthGestion/defend.js";
-import { Button } from "@mantine/core";
 import training from "./training.js";
+
+// !game management function
 function GameManager(value) {
-  console.log(value)
   let element = localStorage.getItem("myMairie");
   const myMairie = JSON.parse(element);
+
+  // *Start the game
   if (myMairie === null) {
     StartGame();
   } else {
@@ -22,10 +24,10 @@ function GameManager(value) {
           }
         }
       } else if (value[0] === "upgrade") {
+        // * Remove the upgrade button
         const elementStyle = document.querySelector("#upgrade");
         const deletButton = elementStyle.querySelector("button");
         elementStyle.removeChild(deletButton)
-        //elementStyle.removeChild(textNode);
         elementStyle.style.display = "none";
         upgrade(value);
       } else if (value[0] === "fight") {

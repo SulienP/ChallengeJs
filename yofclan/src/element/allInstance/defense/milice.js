@@ -1,5 +1,7 @@
 import {Batiment } from "../allInstance.js";
-
+/*
+  * Définition of a milice
+ */
 export class Milice extends Batiment {
   static id = 0;
   constructor() {

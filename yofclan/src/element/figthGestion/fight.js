@@ -1,4 +1,4 @@
-
+// !Function for do a fight 
 function fight(){
     let element = localStorage.getItem("myMairie");
     const myMairie = JSON.parse(element);

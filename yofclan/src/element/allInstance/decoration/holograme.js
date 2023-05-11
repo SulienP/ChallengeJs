@@ -1,5 +1,7 @@
 import { Batiment } from "../allInstance.js";
-
+/*
+  * Définition of a holograme
+ */
 export class Holograme extends Batiment {
   static id = 0;
 

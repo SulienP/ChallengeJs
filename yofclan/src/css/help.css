@@ -1,3 +1,4 @@
+/* * Disposition of help windos */
 .help {
     position: fixed;
     top: 0;
@@ -9,6 +10,7 @@
     overflow: auto;
 }
 
+/* *Definition of tilte style */
 #titleHelp{
     display:flex;
     justify-content: center;
@@ -16,7 +18,7 @@
     margin-bottom: 2%;
 }
 
-
+/* *Definition of all color for all batiment */
 #colorFF9700 {
     background-color: #FF9700;
     width: 50px;

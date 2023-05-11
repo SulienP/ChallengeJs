@@ -1,10 +1,12 @@
 import { Batiment } from "../allInstance.js";
-
+/*
+  * Définition of a camps
+ */
 export class Camps extends Batiment {
   static id = 0;
   constructor() {
     Camps.id++;
-    let finalId = "Milice" + Camps.id.toString();
+    let finalId = "camps" + Camps.id.toString();
 
     super(
       "camps",

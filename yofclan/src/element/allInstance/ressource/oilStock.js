@@ -1,5 +1,7 @@
 import { Batiment } from "../allInstance.js";
-
+/*
+  * Définition of a oilStorage
+ */
 export class OilSTORAGE extends Batiment {
   static id = 0;
   constructor() {

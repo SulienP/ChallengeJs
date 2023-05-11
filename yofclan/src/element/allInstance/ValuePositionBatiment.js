@@ -1,5 +1,7 @@
 import { BatimentPostion } from "./allInstance";
-
+/*
+ * Initialisation of one batiment class 
+ */
 export class ValuePositionBatiment extends BatimentPostion {
   constructor(xAxes, yAxes, size1, size2, color,name, idColor) {
       super(xAxes, yAxes, size1, size2, color, idColor);

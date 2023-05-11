@@ -1,3 +1,4 @@
+// !function to send items to local storage
 function toLocalStorage(element, type) {
     switch (type) {
       case "myMairie":

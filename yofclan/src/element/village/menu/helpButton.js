@@ -1,7 +1,6 @@
 import { Button, CloseButton } from "@mantine/core";
 import React, { useState } from "react";
-import "../../../css/help.css";
-
+ // !Help page
 function HelpButton() {
   const [helpDisplay, helpDisplaySetState] = useState(false);
 

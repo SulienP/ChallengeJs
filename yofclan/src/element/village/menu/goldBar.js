@@ -1,11 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Progress } from "@mantine/core";
-import "../../../css/barProgress.css"
 import { useEffect,  useState } from "react";
 
-/* 
- ! TODO ajout d'un progression en fonction de ce qu'on a + variable
-*/
+// ! Progress Gold Bar
 function GoldBar() {
   const [value, setValue] = useState(0);
   let element = localStorage.getItem("myMairie");

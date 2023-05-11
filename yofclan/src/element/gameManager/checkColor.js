@@ -1,23 +1,33 @@
 import GameManager from "./gameManager";
-
+// !Otherwise we return error messages and check the color
 function checkColorAtClick() {
+  // *Recuperation of my batiment
   let value = localStorage.getItem("batimentArray");
   let batimentArray = JSON.parse(value);
+  //* Recuperation of my canvas
   let canvas = document.querySelector("#myVillage");
   let ctx = canvas.getContext("2d");
+  //* Recuperation of mmy village elemet
   let element = localStorage.getItem("myMairie");
   let myMairie = JSON.parse(element);
   let batimentCheck = "";
   let costValue = "";
   let currentLvlValue = ""; 
+
   const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+  //* setting a stop value
   gradient.addColorStop(0, "red");
   gradient.addColorStop(1, "blue");
   canvas.addEventListener("click", function (event) {
+    // *Retrieval of click coordinates
     const bb = canvas.getBoundingClientRect();
     const x = Math.floor(((event.clientX - bb.left) / bb.width) * canvas.width);
-    const y = Math.floor(((event.clientY - bb.top) / bb.height) * canvas.height);
-    const [r, g, b, a] = ctx.getImageData(x, y, 1, 1).data;
+    const y = Math.floor(
+      ((event.clientY - bb.top) / bb.height) * canvas.height
+    );
+    const [r, g, b] = ctx.getImageData(x, y, 1, 1).data;
+
+    //* Conversion of the color at the position of the click in hexadecimal
     function ColorToHex(color) {
       let hexadecimal = color.toString(16);
       return hexadecimal.length === 1 ? "0" + hexadecimal : hexadecimal;
@@ -27,6 +37,8 @@ function checkColorAtClick() {
       return "#" + ColorToHex(red) + ColorToHex(green) + ColorToHex(blue);
     }
     const colorValue = ConvertRGBtoHex(r, g, b);
+
+    //*Verification if the color corresponds to a building and recovery of its id and different values ​​to display
     for (const element of batimentArray.array) {
       if (colorValue === element.color.toLowerCase()) {
         const nameBat = element.name;
@@ -97,12 +109,13 @@ function checkColorAtClick() {
           default:
             break;
         }
-        console.log(element.color.toLowerCase());
+        //*Retrieving and modifying a div
         const elementStyle = document.querySelector("#upgrade");
         elementStyle.style.display = "block";
 
         const button = document.createElement("button");
         button.innerText = costValue;
+        //* Call from the game manager
         button.addEventListener("click", () => {
           GameManager(["upgrade", batimentCheck, idColorChecking - 1, nameBat]);
         });
@@ -110,11 +123,10 @@ function checkColorAtClick() {
         const texte = document.createTextNode(
           `  ${nameBat}  current level ${currentLvlValue} amelioration price: `
         );
-  
+         //* Adding values ​​to display the display of my div
         elementStyle.appendChild(texte);
         elementStyle.appendChild(button);
         break;
-    
       }
     }
   },

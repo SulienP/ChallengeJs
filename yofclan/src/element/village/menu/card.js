@@ -2,6 +2,8 @@ import "../../../css/card.css";
 import { Button } from "@mantine/core";
 import React, { useState } from "react";
 import GameManager from "../../gameManager/gameManager";
+
+//! shop display with reversment of the display
 function Card() {
   let colorValue = "indigo"
   const [buttonDisplay , buttonDisplaySetState] = useState(true)

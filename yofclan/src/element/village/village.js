@@ -1,9 +1,6 @@
 import "../../css/index.css";
 
-/*
-  TODO: Création des batiments 
-  TODO: Déplacement des batiments 
-*/
+// ! Définition du canvas
 function Village() {
   return (
     <canvas id="myVillage"></canvas>

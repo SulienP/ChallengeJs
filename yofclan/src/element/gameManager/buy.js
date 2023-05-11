@@ -12,6 +12,11 @@ import { Banch } from "../allInstance/decoration/banch"
 import { Holograme } from "../allInstance/decoration/holograme.js"
 import draw from "../village/draw.js"
 import toLocalStorage from "./toLocalStorage.js";
+// ! Function to check and validate the purchase of a building
+//* We check the type of building or resource
+//* if we have enough resources
+//* if we have not reached the maximum building
+//* Otherwise we return error messages
 function buy(value) {
   let element = localStorage.getItem('myMairie')
   const myMairie = JSON.parse(element);
@@ -196,7 +201,6 @@ function buy(value) {
               return ["noEnouthRessource", "decoration", value[3], value[2]];
             }
           
-              return ["noEnouthRessource", "decoration", value[3], value[2]];
             default:
         break;
       }

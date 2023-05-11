@@ -1,3 +1,4 @@
+/* *Card css Propretty  */
 .Card {
     position: absolute;
     bottom: 0%;
@@ -11,7 +12,7 @@
     text-decoration: none;
 }
 
-
+/* *Container of card css Propretty  */
 .container {
     padding: 5%;
     margin-bottom: 5%;

@@ -1,5 +1,7 @@
 import { Batiment } from "../allInstance.js";
-   
+   /*
+  * Définition of a zehi
+ */
 export  class Zehi extends Batiment {
   static id = 0;
   constructor() {

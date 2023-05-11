@@ -1,11 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Progress } from "@mantine/core";
-import "../../../css/barProgress.css";
 import { useEffect, useState } from "react";
 
-/* 
- ! TODO ajout d'un progression en fonction d'une valeur
-*/
+// ! Oil progress Bar
 
 function OilBar() {
   const [value, setValue] = useState(0);

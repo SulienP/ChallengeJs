@@ -1,7 +1,8 @@
 
 import { CloseButton } from "@mantine/core";
-import "../../../css/uppGradeDiv.css"
-import {useState} from "react"
+import { useState } from "react"
+
+// ! Upgrade button
 function UpgradeBatiment(props) {
       const [buttonDisplay, buttonDisplaySetState] = useState(false);
 

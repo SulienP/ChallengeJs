@@ -1,6 +1,7 @@
 import { Button } from "@mantine/core";
 import React, { useState } from "react";
 import drawLastVillage from "../../gameManager/drawLastVillage.js"
+// !Generation function of the village after reloading the range
 function GenrateVillage() {
         const [buttonDisplay, buttonDisplaySetState] = useState(true);
     function inverseDisplay() {

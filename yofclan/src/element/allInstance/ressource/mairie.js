@@ -1,4 +1,7 @@
-import { Mairie }  from '../allInstance.js';
+import { Mairie } from '../allInstance.js';
+/*
+  * Définition of a Mairie
+ */
 export class MAIRIE extends Mairie {
   static newId = 0;
   

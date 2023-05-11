@@ -1,29 +1,24 @@
 import { Batiment } from "../allInstance.js";
 
-/*
-  * Définition of a banch
- */
-export class Banch extends Batiment {
+export class Pub extends Batiment {
   static id = 0;
 
   constructor() {
-    Banch.id++;
-    let finalId = "banvch" + Banch.id.toString();
+    Pub.id++;
+    let finalId = "holograme" + Pub.id.toString();
     super(
-      "banch",
+      "holograme",
       "decoration",
       finalId,
       0,
-      0,
       30,
-      "nothing",
-      0,
-      0,
       0,
       "nothing",
       0,
       0,
+      0,
       "nothing",
+      0,
       0
     );
   }
