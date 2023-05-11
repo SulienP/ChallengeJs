@@ -34,6 +34,11 @@ function Attaque() {
         ></CloseButton>
         <div class="figth">
           <Button
+            style={{
+              marginLeft: "35%",
+              marginRight: "45%",
+            }}
+            color="red"
             onClick={() => {
               GameManager(["fight"]);
             }}
