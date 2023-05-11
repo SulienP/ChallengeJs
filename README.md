@@ -11,7 +11,7 @@ The goal of the project is to realize a game according to the specifications def
 The project uses the following technologies:
 
  <span style="color:orange">Javascript</span> <span style="color:black">react js </span>, <span style="color:red">html </span>, <span style="color:red">css</span> and the <span style="color:blue">Mantine </span> js framework.
-The project the project was made by Sulien Payraudeau
+The project the project was made by Sulien Payraudeau in 2023, in my Bachelor 1.
 ## Here is a description of what the colors correspond to: ##
 <div style="display: inline-block; width: 20px; height: 20px; background-color: #FF9700;"></div> For the mairie. it is that contains all the buildings and all the limits. (color =#FF9700)
 You must improve it to have more building and resource<br></br>
@@ -36,7 +36,7 @@ Be careful if you do not have enough resources or space you will not be able to 
 ## The defense ##
 There is a risk of attack when you charge your village.
 
-# **How i can install the Game** #
+#  <center>**How i can install the Game** </center> #
 * First Step: <br>
     You need to install node js, follow this link: [Download Node.js](https://nodejs.org/en/download) <br>
 * Second Step: <br>
