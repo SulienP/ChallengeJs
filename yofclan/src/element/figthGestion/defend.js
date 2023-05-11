@@ -20,13 +20,13 @@ function defend() {
   let pourcentOfdefeat =Math.random() * (defendValue - (defendValue - 1) + 1) + defendValue - 1;
     if (pourcentOfdefeat > defendValue - 0.3) {
       // *Definition of the player's resource loss in case of defeat (0.3% chance of defeat)
-      const lessGold = myMairie.currentGold - 100 * myMairie.level;
-      myMairie.currentGold = lessGold;
+      const lessGold =100 * myMairie.level;
+      myMairie.currentGold =myMairie.currentGold - lessGold;
       if (myMairie.currentGold <= 0) {
         myMairie.currentGold = 0;
       }
-      const lessOil = myMairie.currentOil - 100 * myMairie.level;
-      myMairie.currentOil = lessOil;
+      const lessOil =  100 * myMairie.level;
+      myMairie.currentOil = myMairie.currentOil -lessOil;
       if (myMairie.currentOil <= 0) {
         myMairie.currentOil = 0;
       }
